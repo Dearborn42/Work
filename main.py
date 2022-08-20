@@ -1,3 +1,5 @@
+print("test")
+
 class Person:
   def __init__(self, name, grade, points):
     self.name = name

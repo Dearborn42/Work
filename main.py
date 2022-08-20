@@ -15,3 +15,14 @@ Best = 0
 
 print(s1.name)
 print(s2.grade)
+
+#ignore this for now, I am asking for help from Mr. Bernard
+#numStudents = int(input("Enter number of students."))
+numStudents = 5
+#creates an empty list
+studentList = []
+#adds a number to the list and adds as much as the user inputs
+#can replace items later, they are just placeholders for now
+for x in range(0, numStudents):
+    studentList.append(x)
+print(studentList)

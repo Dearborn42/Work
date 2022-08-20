@@ -1,4 +1,13 @@
+numStudents = 5
+#creates an empty list
+studentList = []
+#adds a number to the list and adds as much as the user inputs
+#can replace items later, they are just placeholders for now
 
+
+for x in range(0, numStudents):
+    studentList.append(x)
+print(studentList)
 
 class student:
       
@@ -33,14 +42,4 @@ print(Best, SecondBest, ThirdBest)
 
 #ignore this for now, I am asking for help from Mr. Bernard
 #numStudents = int(input("Enter number of students."))
-numStudents = 5
-#creates an empty list
-studentList = []
-#adds a number to the list and adds as much as the user inputs
-#can replace items later, they are just placeholders for now
-
-
-# for x in range(0, numStudents):
-#     studentList.append(x)
-# print(studentList)
 # >>>>>>> 4cc68add7a4d110fc2a7a837d0888c6e39ec184c

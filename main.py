@@ -7,9 +7,6 @@ import json
 fileName = 'students.json'
 
 # Important data that will be used in the code "I think this should be able to be changed by input" -Jacob
-_schoolData = {
-    'numStudents': 5, # How many students
-}
 
 # turns numStudents into that many classes
 
@@ -18,66 +15,67 @@ _schoolData = {
 
 # Adds students to the json by ammount choosen in chooseData function
 # i is the number the student is
-for i in range(_schoolData.get('numStudents')):
+def createStudents(numStudents):
+    for i in range(numStudents):
 
-    # Chooses if student is going to be a male or female by random boolean value
-    genderBool = random.getrandbits(1)
-    if genderBool == True:
-        _studentFirstName = names.get_first_name(gender='male')
-        _studentGender = "male"
-    else:
-        _studentFirstName = names.get_first_name(gender='female')
-        _studentGender = "female"
-    _studentLastName = names.get_last_name()
-    _studentId = "10" + str(i)
+        # Chooses if student is going to be a male or female by random boolean value
+        genderBool = random.getrandbits(1)
+        if genderBool == True:
+            _studentFirstName = names.get_first_name(gender='male')
+            _studentGender = "male"
+        else:
+            _studentFirstName = names.get_first_name(gender='female')
+            _studentGender = "female"
+        _studentLastName = names.get_last_name()
+        _studentId = "10" + str(i)
 
-    # random point system
-    for x in range(0, _schoolData.get('numStudents')):
-        num = random.randint(0, 10)
-    _studentPoints = num
+        # random point system
+        for x in range(0, numStudents):
+            num = random.randint(0, 10)
+        _studentPoints = num
 
-    # random grades
-    grades = ['F', 'D', 'C', 'B', 'A']
-    _studentGrade = random.choice(tuple(grades))
+        # random grades
+        grades = ['F', 'D', 'C', 'B', 'A']
+        _studentGrade = random.choice(tuple(grades))
 
-    # Extra points assigned to base points based on grade A=4, F=0
-    if _studentGrade == 'F':
-        _studentExtraPoints = 0
-    elif _studentGrade == 'D':
-        _studentExtraPoints = 1
-    elif _studentGrade == 'C':
-        _studentExtraPoints = 2
-    elif _studentGrade == 'B':
-        _studentExtraPoints = 3
-    else:
-        _studentExtraPoints = 4
+        # Extra points assigned to base points based on grade A=4, F=0
+        if _studentGrade == 'F':
+            _studentExtraPoints = 0
+        elif _studentGrade == 'D':
+            _studentExtraPoints = 1
+        elif _studentGrade == 'C':
+            _studentExtraPoints = 2
+        elif _studentGrade == 'B':
+            _studentExtraPoints = 3
+        else:
+            _studentExtraPoints = 4
 
-    #  Total score of student after adding normal points plus extra points gven by grade
-    _totalScore = _studentPoints + _studentExtraPoints
+        #  Total score of student after adding normal points plus extra points gven by grade
+        _totalScore = _studentPoints + _studentExtraPoints
 
-    # Turns student data into a dictionary
-    __student_data = {
-                'firstName': _studentFirstName,
-                'lastName': _studentLastName,
-                'gender': _studentGender,
-                'studentId': _studentId,
-                'studentGrade':_studentGrade,
-                'studentExtraPoints':_studentExtraPoints,
-                'totalScore':_totalScore,
-                'studentPoints': _studentPoints
-            }   
-    # Opens the json file
-    with open(fileName,'r+') as file:
-        # Adds the student to Json file
-        fileData = json.load(file)
-        fileData["students"].append(__student_data)
-        file.seek(0)
-        json.dump(fileData, file, indent = 4)
+        # Turns student data into a dictionary
+        __student_data = {
+                    'firstName': _studentFirstName,
+                    'lastName': _studentLastName,
+                    'gender': _studentGender,
+                    'studentId': _studentId,
+                    'studentGrade':_studentGrade,
+                    'studentExtraPoints':_studentExtraPoints,
+                    'totalScore':_totalScore,
+                    'studentPoints': _studentPoints
+                }   
+        # Opens the json file
+        with open(fileName,'r+') as file:
+            # Adds the student to Json file
+            fileData = json.load(file)
+            fileData["students"].append(__student_data)
+            file.seek(0)
+            json.dump(fileData, file, indent = 4)
 
 # Counts and orders who has the most points and returns: 
 # [[studentId, studentPoints],[studentId, studentPoints],[studentId, studentPoints],[studentId, studentPoints]]
 # The first place starts on the left and moves to the right
-def pointsLeaderboard():
+def pointsLeaderboard(numStudents):
     """Function that returns the top of the leaderboard."""
     _Leaderboard = []
     with open('students.json', 'r') as file:
@@ -85,12 +83,10 @@ def pointsLeaderboard():
     Leaderboard = fileData["students"]
     # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints]
     Leaderboard.sort(key=lambda x: x["totalScore"],reverse=True)
-    for i in range(_schoolData.get("numStudents")):
+    for i in range(numStudents):
         _Leaderboard.append([Leaderboard[i]['firstName'], Leaderboard[i]['studentId'],Leaderboard[i]['totalScore']])
     return _Leaderboard
-leaderboard = pointsLeaderboard()
 
-print (leaderboard)
 
 
 #ignore this for now, I am asking for help from Mr. Bernard

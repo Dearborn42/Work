@@ -1,4 +1,5 @@
-
+#from asyncio.windows_events import NULL
+from asyncio.windows_events import NULL
 import random
 import names
 import json
@@ -13,11 +14,10 @@ fileName = 'students.json'
 # Finds highest number first run through, second run through it finds second highest, thrid run through is finds the third highest
 
 
-# Adds students to the json by ammount choosen in chooseData function
-# i is the number the student is
 def createStudents(numStudents):
+    global studentsNum
+    """Function that creates students from numStudents"""
     for i in range(numStudents):
-
         # Chooses if student is going to be a male or female by random boolean value
         genderBool = random.getrandbits(1)
         if genderBool == True:
@@ -29,66 +29,47 @@ def createStudents(numStudents):
         _studentLastName = names.get_last_name()
         _studentId = "10" + str(i)
 
-        # random point system
-        for x in range(0, numStudents):
-            num = random.randint(0, 10)
-        _studentPoints = num
-
-        # random grades
-        grades = ['F', 'D', 'C', 'B', 'A']
-        _studentGrade = random.choice(tuple(grades))
-
-        # Extra points assigned to base points based on grade A=4, F=0
-        if _studentGrade == 'F':
-            _studentExtraPoints = 0
-        elif _studentGrade == 'D':
-            _studentExtraPoints = 1
-        elif _studentGrade == 'C':
-            _studentExtraPoints = 2
-        elif _studentGrade == 'B':
-            _studentExtraPoints = 3
-        else:
-            _studentExtraPoints = 4
-
-        #  Total score of student after adding normal points plus extra points gven by grade
-        _totalScore = _studentPoints + _studentExtraPoints
-
+        # Random grade level: 0 is freshmen - 3 is senior
+        gradeLevel = random.choice([9,10,11,12])
         # Turns student data into a dictionary
         __student_data = {
                     'firstName': _studentFirstName,
                     'lastName': _studentLastName,
+                    'gradeLevel': gradeLevel,
                     'gender': _studentGender,
                     'studentId': _studentId,
-                    'studentGrade':_studentGrade,
-                    'studentExtraPoints':_studentExtraPoints,
-                    'totalScore':_totalScore,
-                    'studentPoints': _studentPoints
+                    'studentGrade': random.randint(50, 100),
+                    'studentPoints': random.randint(0, 4),
+                    'totalScore': 0,
                 }   
+        if __student_data.get('studentGrade') >= 90:
+            __student_data['totalScore'] += 4 + __student_data['studentPoints']
+        elif __student_data.get('studentGrade') >= 80:
+            __student_data['totalScore'] += 3 + __student_data['studentPoints']
+        elif __student_data.get('studentGrade') >= 70:
+            __student_data['totalScore'] += 2 + __student_data['studentPoints']
+        elif __student_data.get('studentGrade') >= 60:
+            __student_data['totalScore'] += 1 + __student_data['studentPoints']
+        else:
+            __student_data['totalScore'] + __student_data['studentPoints']
+    
         # Opens the json file
         with open(fileName,'r+') as file:
             # Adds the student to Json file
             fileData = json.load(file)
             fileData["students"].append(__student_data)
+            fileData["studentsNumber"] += 1
             file.seek(0)
             json.dump(fileData, file, indent = 4)
 
-# Counts and orders who has the most points and returns: 
-# [[studentId, studentPoints],[studentId, studentPoints],[studentId, studentPoints],[studentId, studentPoints]]
-# The first place starts on the left and moves to the right
-def pointsLeaderboard(numStudents):
-    """Function that returns the top of the leaderboard."""
+def pointsLeaderboard():
+    """Function that returns the top of the leaderboard"""
     _Leaderboard = []
     with open('students.json', 'r') as file:
             fileData = json.load(file)
     Leaderboard = fileData["students"]
-    # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints]
+    # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints, studentName]
     Leaderboard.sort(key=lambda x: x["totalScore"],reverse=True)
-    for i in range(numStudents):
-        _Leaderboard.append([Leaderboard[i]['firstName'], Leaderboard[i]['studentId'],Leaderboard[i]['totalScore']])
+    for i in range(fileData["totalScore"]):
+        _Leaderboard.append([Leaderboard[i]['studentId'],Leaderboard[i]['totalScore'],Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
     return _Leaderboard
-
-
-
-#ignore this for now, I am asking for help from Mr. Bernard
-#numStudents = int(input("Enter number of students."))
-# >>>>>>> 4cc68add7a4d110fc2a7a837d0888c6e39ec184c

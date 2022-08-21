@@ -1,4 +1,3 @@
-#from asyncio.windows_events import NULL
 from asyncio.windows_events import NULL
 import random
 import names
@@ -31,6 +30,7 @@ def createStudents(numStudents):
 
         # Random grade level: 0 is freshmen - 3 is senior
         gradeLevel = random.choice([9,10,11,12])
+        Points = random.randint(0, 4)
         # Turns student data into a dictionary
         __student_data = {
                     'firstName': _studentFirstName,
@@ -39,19 +39,20 @@ def createStudents(numStudents):
                     'gender': _studentGender,
                     'studentId': _studentId,
                     'studentGrade': random.randint(50, 100),
-                    'studentPoints': random.randint(0, 4),
                     'totalScore': 0,
+                    # [Intelligence,OnTask,WorkOnTime,Happiness] --Will be used later to calculate assignment scores
+                    'personality': [random.randint(1, 101),random.randint(1, 101),random.randint(1, 101),random.randint(1, 101)]
                 }   
         if __student_data.get('studentGrade') >= 90:
-            __student_data['totalScore'] += 4 + __student_data['studentPoints']
+            __student_data['totalScore'] += 4 + Points
         elif __student_data.get('studentGrade') >= 80:
-            __student_data['totalScore'] += 3 + __student_data['studentPoints']
+            __student_data['totalScore'] += 3 + Points
         elif __student_data.get('studentGrade') >= 70:
-            __student_data['totalScore'] += 2 + __student_data['studentPoints']
+            __student_data['totalScore'] += 2 + Points
         elif __student_data.get('studentGrade') >= 60:
-            __student_data['totalScore'] += 1 + __student_data['studentPoints']
+            __student_data['totalScore'] += 1 + Points
         else:
-            __student_data['totalScore'] + __student_data['studentPoints']
+            __student_data['totalScore'] + Points
     
         # Opens the json file
         with open(fileName,'r+') as file:
@@ -73,3 +74,4 @@ def pointsLeaderboard():
     for i in range(fileData["totalScore"]):
         _Leaderboard.append([Leaderboard[i]['studentId'],Leaderboard[i]['totalScore'],Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
     return _Leaderboard
+

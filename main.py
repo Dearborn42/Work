@@ -41,7 +41,7 @@ def createStudents(numStudents):
                     'studentGrade': random.randint(50, 100),
                     'totalScore': 0,
                     # [Intelligence,OnTask,WorkOnTime,Happiness] --Will be used later to calculate assignment scores
-                    'personality': [random.randint(1, 101),random.randint(1, 101),random.randint(1, 101),random.randint(1, 101)]
+                    'personality': [random.randint(1, 101), random.randint(1, 101), random.randint(1, 101), random.randint(1, 101)]
                 }   
         if __student_data.get('studentGrade') >= 90:
             __student_data['totalScore'] += 4 + Points

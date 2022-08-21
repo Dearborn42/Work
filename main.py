@@ -30,7 +30,7 @@ def createStudents(numStudents):
 
         # Random grade level: 0 is freshmen - 3 is senior
         gradeLevel = random.choice([9,10,11,12])
-        Points = random.randint(0, 4)
+
         # Turns student data into a dictionary
         __student_data = {
                     'firstName': _studentFirstName,
@@ -38,21 +38,13 @@ def createStudents(numStudents):
                     'gradeLevel': gradeLevel,
                     'gender': _studentGender,
                     'studentId': _studentId,
-                    'studentGrade': random.randint(50, 100),
-                    'totalScore': 0,
+                    'studentGrade': 100,
+                    'totalPoints': 0,
                     # [Intelligence,OnTask,WorkOnTime,Happiness] --Will be used later to calculate assignment scores
-                    'personality': [random.randint(1, 101),random.randint(1, 101),random.randint(1, 101),random.randint(1, 101)]
+                    'personality': [random.randint(35, 101),random.randint(35, 101),random.randint(35, 101),random.randint(35, 101)],
+                    # [Math,English,Science,History]
+                    'subjectSkills': [random.randint(35, 101),random.randint(35, 101),random.randint(35, 101),random.randint(35, 101)]
                 }   
-        if __student_data.get('studentGrade') >= 90:
-            __student_data['totalScore'] += 4 + Points
-        elif __student_data.get('studentGrade') >= 80:
-            __student_data['totalScore'] += 3 + Points
-        elif __student_data.get('studentGrade') >= 70:
-            __student_data['totalScore'] += 2 + Points
-        elif __student_data.get('studentGrade') >= 60:
-            __student_data['totalScore'] += 1 + Points
-        else:
-            __student_data['totalScore'] + Points
     
         # Opens the json file
         with open(fileName,'r+') as file:
@@ -66,12 +58,29 @@ def createStudents(numStudents):
 def pointsLeaderboard():
     """Function that returns the top of the leaderboard"""
     _Leaderboard = []
-    with open('students.json', 'r') as file:
+    with open(fileName, 'r') as file:
             fileData = json.load(file)
     Leaderboard = fileData["students"]
     # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints, studentName]
     Leaderboard.sort(key=lambda x: x["totalScore"],reverse=True)
-    for i in range(fileData["totalScore"]):
+    for i in range(fileData["studentsNumber"]):
         _Leaderboard.append([Leaderboard[i]['studentId'],Leaderboard[i]['totalScore'],Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
     return _Leaderboard
+
+def assignmentCreation(subject):
+    """Function that creates a new assignment"""
+    with open(fileName, 'r') as file:
+            fileData = json.load(file)
+    students = fileData["students"]
+    fileData["assignmentNumber"] += 1
+    for i in range(fileData["studentsNumber"]):
+        # Calculates persons grade based on personality and subject skills.
+        score = random.randint(0,students[i]["subjectSkills"][subject])
+        personality = students[i]["personality"]
+        score = score + personality[0] + personality[0] + personality[0] + personality[0]
+        score = score / 5
+        students[i]["studentGrade"] = (students[i]["studentGrade"] + score) / fileData["assignmentNumber"]
+    with open(fileName,'w') as file:
+            file.seek(0)
+            json.dump(fileData, file, indent = 4)
 

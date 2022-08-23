@@ -1,4 +1,5 @@
 from asyncio.windows_events import NULL
+from ui import Log
 import random,names,json,time,math
 
 fileName = 'students.json'
@@ -80,7 +81,34 @@ def assignmentCreation(subject):
 
 def studentEvents(event):
     """Function that creates or lets students participate in events."""
-    def FootballEvent():
-        print()
-    def FootballEvent():
-        print()
+
+    ###### Still working on this so ignore how some parts may not work
+
+    sports = ["football", "soccer", "baseball", "volleyball,", "softball"]
+    nonsports = ["SpellingBee", "Fbla", "ChessTournament", "ChessTournament"]
+    possibleWinners = []
+    possibleStudentCouncil = []
+
+    with open(fileName, 'r+') as file:
+        fileData = json.load(file)
+        students = fileData["students"]
+        for i in range(len(students)):
+            student = fileData["students"][i]
+            canAttend = bool(random.getrandbits(1))
+            if canAttend == True and student["personality"]["happiness"] >= 60:
+                if event in sports:
+                    Log("A " + event + " game has started")
+                    student["totalPoints"] += 1
+                elif event in nonsports:
+                    if student["Intelligence"] >= 80:
+                        possibleWinners.append(student["studentId"])
+                        Log("A " + event + " event has started")
+                        student["totalPoints"] += 1
+                elif event == "CouncilElections":
+                    if student["Intelligence"] >= 60 and student["studentGrade"] >= 70:
+                        possibleStudentCouncil.append(student["studentId"])
+                        Log("A Council Elections has sarted")
+                        student["totalPoints"] += 1
+                elif event == "CustomEvent":
+                    Log("A " + event + " event has started")
+                    student["totalPoints"] += 1

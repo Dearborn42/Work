@@ -1,6 +1,49 @@
 {
-    "students": [],
-    "studentsNumber": 0,
-    "assignmentNumber": 1,
+    "students": [
+        {
+            "firstName": "Carol",
+            "lastName": "Miyamoto",
+            "gradeLevel": 12,
+            "gender": "female",
+            "studentId": "100",
+            "studentGrade": 73.55273712021298,
+            "totalPoints": 0,
+            "personality": [
+                98,
+                81,
+                59,
+                46
+            ],
+            "subjectSkills": [
+                74,
+                99,
+                47,
+                66
+            ]
+        },
+        {
+            "firstName": "Judy",
+            "lastName": "Rohm",
+            "gradeLevel": 12,
+            "gender": "female",
+            "studentId": "101",
+            "studentGrade": 83.66033547706903,
+            "totalPoints": 0,
+            "personality": [
+                84,
+                95,
+                99,
+                50
+            ],
+            "subjectSkills": [
+                87,
+                37,
+                71,
+                72
+            ]
+        }
+    ],
+    "studentsNumber": 2,
+    "assignmentNumber": 33,
     "studentCouncil": []
 }

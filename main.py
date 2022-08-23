@@ -115,12 +115,3 @@ def assignmentCreation(subject):
             file.seek(0)
             json.dump(fileData, file, indent = 4)
 
-    with open('students.json', 'r') as file:
-        fileData = json.load(file)
-    _Leaderboard = []
-    Leaderboard = fileData["students"]
-    # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints, studentName]
-    Leaderboard.sort(key=lambda x: x["totalScore"], reverse=True)
-    for i in range(fileData["totalScore"]):
-        _Leaderboard.append([Leaderboard[i]['studentId'], Leaderboard[i]['totalScore'],Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
-    return _Leaderboard

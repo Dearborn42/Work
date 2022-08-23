@@ -1,7 +1,231 @@
 {
     "students": [
-   
+        {
+            "firstName": "Terry",
+            "lastName": "Arnold",
+            "gradeLevel": 11,
+            "gender": "male",
+            "studentId": "100",
+            "studentGrade": 94,
+            "totalScore": 6,
+            "personality": [
+                37,
+                36,
+                67,
+                80
+            ]
+        },
+        {
+            "firstName": "Dean",
+            "lastName": "Reckart",
+            "gradeLevel": 9,
+            "gender": "male",
+            "studentId": "101",
+            "studentGrade": 98,
+            "totalScore": 5,
+            "personality": [
+                68,
+                17,
+                60,
+                83
+            ]
+        },
+        {
+            "firstName": "Clint",
+            "lastName": "Rubin",
+            "gradeLevel": 9,
+            "gender": "male",
+            "studentId": "102",
+            "studentGrade": 58,
+            "totalScore": 0,
+            "personality": [
+                96,
+                66,
+                54,
+                38
+            ]
+        },
+        {
+            "firstName": "William",
+            "lastName": "Kaufman",
+            "gradeLevel": 9,
+            "gender": "male",
+            "studentId": "103",
+            "studentGrade": 92,
+            "totalScore": 8,
+            "personality": [
+                50,
+                37,
+                46,
+                31
+            ]
+        },
+        {
+            "firstName": "Jung",
+            "lastName": "Peterson",
+            "gradeLevel": 11,
+            "gender": "female",
+            "studentId": "104",
+            "studentGrade": 76,
+            "totalScore": 3,
+            "personality": [
+                35,
+                80,
+                93,
+                59
+            ]
+        },
+        {
+            "firstName": "Loretta",
+            "lastName": "Lugo",
+            "gradeLevel": 10,
+            "gender": "female",
+            "studentId": "100",
+            "studentGrade": 93,
+            "totalScore": 7,
+            "personality": [
+                100,
+                86,
+                6,
+                2
+            ]
+        },
+        {
+            "firstName": "Tina",
+            "lastName": "Gonzales",
+            "gradeLevel": 11,
+            "gender": "female",
+            "studentId": "101",
+            "studentGrade": 87,
+            "totalScore": 4,
+            "personality": [
+                26,
+                82,
+                77,
+                33
+            ]
+        },
+        {
+            "firstName": "Jane",
+            "lastName": "Frein",
+            "gradeLevel": 12,
+            "gender": "female",
+            "studentId": "102",
+            "studentGrade": 56,
+            "totalScore": 0,
+            "personality": [
+                71,
+                89,
+                53,
+                100
+            ]
+        },
+        {
+            "firstName": "Samuel",
+            "lastName": "Payne",
+            "gradeLevel": 11,
+            "gender": "male",
+            "studentId": "103",
+            "studentGrade": 86,
+            "totalScore": 6,
+            "personality": [
+                23,
+                99,
+                75,
+                62
+            ]
+        },
+        {
+            "firstName": "Frederick",
+            "lastName": "Gore",
+            "gradeLevel": 11,
+            "gender": "male",
+            "studentId": "104",
+            "studentGrade": 76,
+            "totalScore": 3,
+            "personality": [
+                18,
+                43,
+                74,
+                36
+            ]
+        },
+        {
+            "firstName": "Debbie",
+            "lastName": "Allah",
+            "gradeLevel": 9,
+            "gender": "female",
+            "studentId": "100",
+            "studentGrade": 58,
+            "totalScore": 0,
+            "personality": [
+                23,
+                46,
+                47,
+                5
+            ]
+        },
+        {
+            "firstName": "Jay",
+            "lastName": "Betance",
+            "gradeLevel": 10,
+            "gender": "male",
+            "studentId": "101",
+            "studentGrade": 88,
+            "totalScore": 5,
+            "personality": [
+                90,
+                19,
+                22,
+                5
+            ]
+        },
+        {
+            "firstName": "Amy",
+            "lastName": "Aldape",
+            "gradeLevel": 11,
+            "gender": "female",
+            "studentId": "102",
+            "studentGrade": 82,
+            "totalScore": 6,
+            "personality": [
+                10,
+                21,
+                98,
+                78
+            ]
+        },
+        {
+            "firstName": "Karen",
+            "lastName": "Lindley",
+            "gradeLevel": 10,
+            "gender": "female",
+            "studentId": "103",
+            "studentGrade": 100,
+            "totalScore": 6,
+            "personality": [
+                8,
+                31,
+                55,
+                24
+            ]
+        },
+        {
+            "firstName": "Michelle",
+            "lastName": "Smith",
+            "gradeLevel": 10,
+            "gender": "female",
+            "studentId": "104",
+            "studentGrade": 58,
+            "totalScore": 0,
+            "personality": [
+                81,
+                89,
+                85,
+                51
+            ]
+        }
     ],
-    "studentsNumber": 0,
-    "assignmentsNumber":0
+    "studentsNumber": 15,
+    "assignmentsNumber": 0
 }

@@ -22,6 +22,8 @@ def _createAssignment():
 Label(root, text = "Add students:").grid(row=3, column=0)
 studentsNum = Entry(root)
 studentsNum.grid(row=4, column=0)
+
+# Button to add students
 Label(root, text = "").grid(row=4, column=1)
 studentsNum_submit = Button(root, text = "Submit", command=_createStudents).grid(row=4, column=2)
 

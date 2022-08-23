@@ -1,5 +1,6 @@
 {
-    "students": [],
+    "students": [
+    ],
     "studentsNumber": 0,
     "assignmentNumber": 0
 }

@@ -1,19 +1,28 @@
+import time
+from time import strftime
 from tkinter import *
 import main
+import asyncio
 root = Tk()
 root.title("School control panel")
 
 # Functions
+
+
 def _createStudents():
     main.createStudents(int(studentsNum.get()))
-    Label(root, text = "Added " + studentsNum.get() + " Students").grid(row=5, column=0)
-    #myLabel.pack()
+    Label(root, text="Added " + studentsNum.get() +
+          " Students").grid(row=5, column=0)
+    # myLabel.pack()
+
 
 def _createEvents():
     print()
 
+
 def _createAssignment():
     print()
+
 
 # Choose how many students
 Label(root, text = "Add students:").grid(row=3, column=0)
@@ -21,6 +30,8 @@ studentsNum = Entry(root)
 studentsNum.grid(row=4, column=0)
 Label(root, text = "").grid(row=4, column=1)
 studentsNum_submit = Button(root, text = "Submit", command=_createStudents).grid(row=4, column=2)
+
+################################################################
 
 logs = Label(root, text ='Logs', font = "30")  
 logs.grid(row=11, column=0)
@@ -32,6 +43,8 @@ for line in range(1, 100):
 LogsList.grid(row=12, column=0)  
  
 logsScroll.config(command = LogsList.yview) 
+
+################################################################
 
 Choice1 = IntVar()
 Label(root, text = "Create an assignment:").grid(row=5, column=0)
@@ -47,9 +60,35 @@ Label(root, text = "Create an assignment:").grid(row=5, column=0)
 assignmentRadio4 = Radiobutton(root, text = "History", variable = Choice1, value = 4)
 assignmentRadio4.grid(row=9, column=0)
 
-
 assignment = Entry(root)
 assignment.grid(row=10, column=0)
 assignment.insert(0, "type assignment name...")
 assignment_submit = Button(root, text = "Submit", command=_createStudents).grid(row=10, column=2)
 root.mainloop()
+Label(root, text="Add students:").grid(row=3, column=0)
+studentsNum = Entry(root, text="Type here...")
+studentsNum.grid(row=4, column=0)
+studentsNum_Submit = Button(
+    root, text="Submit", command=_createAssignment).grid(row=4, column=1)
+
+################################################################
+
+root.mainloop()
+
+# import the time module
+
+
+def countdown(t):
+
+    while t:
+        mins, secs = divmod(t, 60)
+        timer = '{:02d}:{:02d}'.format(mins, secs)
+        print(timer, end="\r")
+        time.sleep(1)
+        t += 1
+        if t == 120:
+            t = 1
+
+
+t = 1
+countdown(int(t))

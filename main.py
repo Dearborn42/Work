@@ -2,6 +2,9 @@ from asyncio.windows_events import NULL
 import random
 import names
 import json
+import time
+
+# input time in seconds
 
 
 fileName = 'students.json'
@@ -29,6 +32,7 @@ def createStudents(numStudents):
         _studentId = "10" + str(i)
 
         # Random grade level: 0 is freshmen - 3 is senior
+
         gradeLevel = random.choice([9,10,11,12])
 
         # Turns student data into a dictionary
@@ -46,14 +50,41 @@ def createStudents(numStudents):
                     'subjectSkills': [random.randint(35, 101),random.randint(35, 101),random.randint(35, 101),random.randint(35, 101)]
                 }   
     
+
+        gradeLevel = random.choice([9, 10, 11, 12])
+        Points = random.randint(0, 4)
+        # Turns student data into a dictionary
+        __student_data = {
+            'firstName': _studentFirstName,
+            'lastName': _studentLastName,
+            'gradeLevel': gradeLevel,
+            'gender': _studentGender,
+            'studentId': _studentId,
+            'studentGrade': random.randint(50, 100),
+            'totalScore': 0,
+            # [Intelligence,OnTask,WorkOnTime,Happiness] --Will be used later to calculate assignment scores
+            'personality': [random.randint(1, 101), random.randint(1, 101), random.randint(1, 101), random.randint(1, 101)]
+        }
+        if __student_data.get('studentGrade') >= 90:
+            __student_data['totalScore'] += 4 + Points
+        elif __student_data.get('studentGrade') >= 80:
+            __student_data['totalScore'] += 3 + Points
+        elif __student_data.get('studentGrade') >= 70:
+            __student_data['totalScore'] += 2 + Points
+        elif __student_data.get('studentGrade') >= 60:
+            __student_data['totalScore'] += 1 + Points
+        else:
+            __student_data['totalScore'] + Points
+
         # Opens the json file
-        with open(fileName,'r+') as file:
+        with open(fileName, 'r+') as file:
             # Adds the student to Json file
             fileData = json.load(file)
             fileData["students"].append(__student_data)
             fileData["studentsNumber"] += 1
             file.seek(0)
-            json.dump(fileData, file, indent = 4)
+            json.dump(fileData, file, indent=4)
+
 
 def pointsLeaderboard():
     """Function that returns the top of the leaderboard"""
@@ -84,3 +115,12 @@ def assignmentCreation(subject):
             file.seek(0)
             json.dump(fileData, file, indent = 4)
 
+    with open('students.json', 'r') as file:
+        fileData = json.load(file)
+    _Leaderboard = []
+    Leaderboard = fileData["students"]
+    # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints, studentName]
+    Leaderboard.sort(key=lambda x: x["totalScore"], reverse=True)
+    for i in range(fileData["totalScore"]):
+        _Leaderboard.append([Leaderboard[i]['studentId'], Leaderboard[i]['totalScore'],Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
+    return _Leaderboard

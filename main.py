@@ -114,4 +114,8 @@ def assignmentCreation(subject):
     with open(fileName,'w') as file:
             file.seek(0)
             json.dump(fileData, file, indent = 4)
-
+with open(fileName, 'r') as file:
+    fileData = json.load(file)
+print(fileData["students"])
+assignmentCreation(1)
+print(fileData["students"])

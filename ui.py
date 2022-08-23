@@ -30,9 +30,6 @@ studentsNum = Entry(root)
 studentsNum.grid(row=4, column=0)
 Label(root, text = "").grid(row=4, column=1)
 studentsNum_submit = Button(root, text = "Submit", command=_createStudents).grid(row=4, column=2)
-
-################################################################
-
 logs = Label(root, text ='Logs', font = "30")  
 logs.grid(row=11, column=0)
 logsScroll = Scrollbar(root)
@@ -43,9 +40,6 @@ for line in range(1, 100):
 LogsList.grid(row=12, column=0)  
  
 logsScroll.config(command = LogsList.yview) 
-
-################################################################
-
 Choice1 = IntVar()
 Label(root, text = "Create an assignment:").grid(row=5, column=0)
 assignmentRadio1 = Radiobutton(root, text = "Math", variable = Choice1, value = 1)
@@ -59,21 +53,13 @@ assignmentRadio3.grid(row=8, column=0)
 Label(root, text = "Create an assignment:").grid(row=5, column=0)
 assignmentRadio4 = Radiobutton(root, text = "History", variable = Choice1, value = 4)
 assignmentRadio4.grid(row=9, column=0)
-
 assignment = Entry(root)
 assignment.grid(row=10, column=0)
 assignment.insert(0, "type assignment name...")
 assignment_submit = Button(root, text = "Submit", command=_createStudents).grid(row=10, column=2)
 root.mainloop()
-Label(root, text="Add students:").grid(row=3, column=0)
-studentsNum = Entry(root, text="Type here...")
-studentsNum.grid(row=4, column=0)
-studentsNum_Submit = Button(
-    root, text="Submit", command=_createAssignment).grid(row=4, column=1)
 
 ################################################################
-
-root.mainloop()
 
 # import the time module
 

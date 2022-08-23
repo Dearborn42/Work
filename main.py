@@ -45,9 +45,9 @@ def createStudents(numStudents):
                     'studentGrade': 100,
                     'totalPoints': 0,
                     # [Intelligence,OnTask,WorkOnTime,Happiness] --Will be used later to calculate assignment scores
-                    'personality': [random.randint(70, 100),random.randint(70, 100),random.randint(70, 100),random.randint(70, 100)],
+                    'personality': [random.randint(20, 100),random.randint(10, 100),random.randint(15, 100),random.randint(10, 100)],
                     # [Math,English,Science,History]
-                    'subjectSkills': [random.randint(70, 100),random.randint(70, 100),random.randint(70, 100),random.randint(70, 100)]
+                    'subjectSkills': [random.randint(1, 100),random.randint(25, 100),random.randint(35, 100),random.randint(5, 100)]
                 }   
 
         # Opens the json file
@@ -88,4 +88,3 @@ def assignmentCreation(subject):
         file.seek(0)
         file.truncate()
         json.dump(fileData, file, indent=4)
-

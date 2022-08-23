@@ -1,5 +1,5 @@
 {
     "students": [],
     "studentsNumber": 0,
-    "assignmentNumber": 0
+    "assignmentNumber": 2
 }

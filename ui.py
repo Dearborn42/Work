@@ -1,7 +1,7 @@
 import time
 from time import strftime
 from tkinter import *
-import main
+from main import createStudents
 import asyncio
 root = Tk()
 root.title("School control panel")
@@ -10,7 +10,7 @@ root.title("School control panel")
 
 
 def _createStudents():
-    main.createStudents(int(studentsNum.get()))
+    createStudents(int(studentsNum.get()))
     Label(root, text="Added " + studentsNum.get() +
           " Students").grid(row=5, column=0)
     # myLabel.pack()
@@ -77,4 +77,4 @@ def countdown(t):
 
 
 t = 1
-countdown(int(t))
+#countdown(int(t))

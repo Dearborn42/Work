@@ -45,36 +45,10 @@ def createStudents(numStudents):
                     'studentGrade': 100,
                     'totalPoints': 0,
                     # [Intelligence,OnTask,WorkOnTime,Happiness] --Will be used later to calculate assignment scores
-                    'personality': [random.randint(35, 101),random.randint(35, 101),random.randint(35, 101),random.randint(35, 101)],
+                    'personality': [random.randint(70, 100),random.randint(70, 100),random.randint(70, 100),random.randint(70, 100)],
                     # [Math,English,Science,History]
-                    'subjectSkills': [random.randint(35, 101),random.randint(35, 101),random.randint(35, 101),random.randint(35, 101)]
+                    'subjectSkills': [random.randint(70, 100),random.randint(70, 100),random.randint(70, 100),random.randint(70, 100)]
                 }   
-    
-
-        gradeLevel = random.choice([9, 10, 11, 12])
-        Points = random.randint(0, 4)
-        # Turns student data into a dictionary
-        __student_data = {
-            'firstName': _studentFirstName,
-            'lastName': _studentLastName,
-            'gradeLevel': gradeLevel,
-            'gender': _studentGender,
-            'studentId': _studentId,
-            'studentGrade': random.randint(50, 100),
-            'totalScore': 0,
-            # [Intelligence,OnTask,WorkOnTime,Happiness] --Will be used later to calculate assignment scores
-            'personality': [random.randint(1, 101), random.randint(1, 101), random.randint(1, 101), random.randint(1, 101)]
-        }
-        if __student_data.get('studentGrade') >= 90:
-            __student_data['totalScore'] += 4 + Points
-        elif __student_data.get('studentGrade') >= 80:
-            __student_data['totalScore'] += 3 + Points
-        elif __student_data.get('studentGrade') >= 70:
-            __student_data['totalScore'] += 2 + Points
-        elif __student_data.get('studentGrade') >= 60:
-            __student_data['totalScore'] += 1 + Points
-        else:
-            __student_data['totalScore'] + Points
 
         # Opens the json file
         with open(fileName, 'r+') as file:
@@ -100,22 +74,18 @@ def pointsLeaderboard():
 
 def assignmentCreation(subject):
     """Function that creates a new assignment"""
-    with open(fileName, 'r') as file:
-            fileData = json.load(file)
-    students = fileData["students"]
-    fileData["assignmentNumber"] += 1
-    for i in range(fileData["studentsNumber"]):
-        # Calculates persons grade based on personality and subject skills.
-        score = random.randint(0,students[i]["subjectSkills"][subject])
-        personality = students[i]["personality"]
-        score = score + personality[0] + personality[0] + personality[0] + personality[0]
-        score = score / 5
-        students[i]["studentGrade"] = (students[i]["studentGrade"] + score) / fileData["assignmentNumber"]
-    with open(fileName,'w') as file:
-            file.seek(0)
-            json.dump(fileData, file, indent = 4)
-with open(fileName, 'r') as file:
-    fileData = json.load(file)
-print(fileData["students"])
-assignmentCreation(1)
-print(fileData["students"])
+    with open(fileName, 'r+') as file:
+        fileData = json.load(file)
+        students = fileData["students"]
+        fileData["assignmentNumber"] += 1
+        for i in range(fileData["studentsNumber"]):
+            # Calculates persons grade based on personality and subject skills.
+            score = random.randint(students[i]["subjectSkills"][subject],101)
+            personality = students[i]["personality"]
+            score = score + personality[0] + personality[1] + personality[2] + personality[3]
+            score = score / 5
+            students[i]["studentGrade"] = (students[i]["studentGrade"] + score) / 2
+        file.seek(0)
+        file.truncate()
+        json.dump(fileData, file, indent=4)
+

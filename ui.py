@@ -14,8 +14,9 @@ def _createStudents():
     Log("Generated " + studentsNum.get() + " students. ")
 
 def _createAssignment():
-    assignmentCreation(int(Choice1.get()))
-
+    totalScore = assignmentCreation(int(Choice1.get()))
+    Log("Created " + assignment.get() + " Assignment")
+    Log("Total Score: " + str(totalScore) + "%")
 ################################################################
 
 # Choose how many students
@@ -35,15 +36,14 @@ logsScroll = Scrollbar(root)
 logsScroll.grid(row=12, column=1, sticky='ns')
 LogsList = Listbox(root, yscrollcommand = logsScroll.set )
 
-line = 1
 def Log(message):
-    LogsList.insert(END, str(message) + str(line)) 
+    LogsList.insert(END, str(message)) 
 
 LogsList.grid(row=12, column=0)  
+logsScroll.config(command = LogsList.yview) 
 
 ################################################################
  
-logsScroll.config(command = LogsList.yview) 
 Choice1 = IntVar()
 Label(root, text = "Create an assignment:").grid(row=5, column=0)
 assignmentRadio1 = Radiobutton(root, text = "Math", variable = Choice1, value = 0)

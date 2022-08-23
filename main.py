@@ -47,7 +47,7 @@ def createStudents(numStudents):
                     # [Intelligence,OnTask,WorkOnTime,Happiness] --Will be used later to calculate assignment scores
                     'personality': [random.randint(50, 100),random.randint(40, 100),random.randint(55, 100),random.randint(40, 100)],
                     # [Math,English,Science,History]
-                    'subjectSkills': [random.randint(20, 100),random.randint(25, 100),random.randint(35, 100),random.randint(20, 100)]
+                    'subjectSkills': [random.randint(20, 100),random.randint(25, 100), random.randint(35, 100), random.randint(20, 100)]
                 }   
 
         # Opens the json file

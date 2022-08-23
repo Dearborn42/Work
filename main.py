@@ -1,13 +1,13 @@
 from asyncio.windows_events import NULL
-import random,names,json,time,math,multiprocessing
+import random,names,json,time,math,asyncio
 
 fileName = 'students.json'
 
-def _timeSystem():
+async def _timeSystem():
     """A multi threaded function that keeps track of time and starts events when the time is reached"""
     _time = [0,0,0]
     while True:
-        time.sleep(1)
+        await asyncio.sleep(1)
         _time[2] += 1
         if _time[2] >= 60:
             _time[2] = 0
@@ -17,7 +17,7 @@ def _timeSystem():
             _time[0] += 1
         print(_time)
 
-def main():
+async def main():
     def createStudents(numStudents):
         global studentsNum
         """Function that creates students from numStudents"""
@@ -123,8 +123,7 @@ def main():
                     elif event == "CustomEvent":
                         student["totalPoints"] += 1
     print("test")
-if __name__ == '__main__':
-    process1 = multiprocessing.Process(target=main)
-    process2 = multiprocessing.Process(target=_timeSystem)
-    process1.start()
-    process2.start()
+
+if __name__ == "__main__":
+   loop = asyncio.get_event_loop()
+   loop.run_until_complete(asyncio.gather(main(), _timeSystem()))

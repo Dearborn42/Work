@@ -1,5 +1,4 @@
 from asyncio.windows_events import NULL
-from ui import Log
 import random,names,json,time,math
 
 fileName = 'students.json'
@@ -97,18 +96,14 @@ def studentEvents(event):
             canAttend = bool(random.getrandbits(1))
             if canAttend == True and student["personality"]["happiness"] >= 60:
                 if event in sports:
-                    Log("A " + event + " game has started")
                     student["totalPoints"] += 1
                 elif event in nonsports:
                     if student["Intelligence"] >= 80:
                         possibleWinners.append(student["studentId"])
-                        Log("A " + event + " event has started")
                         student["totalPoints"] += 1
                 elif event == "CouncilElections":
                     if student["Intelligence"] >= 60 and student["studentGrade"] >= 70:
                         possibleStudentCouncil.append(student["studentId"])
-                        Log("A Council Elections has sarted")
                         student["totalPoints"] += 1
                 elif event == "CustomEvent":
-                    Log("A " + event + " event has started")
                     student["totalPoints"] += 1

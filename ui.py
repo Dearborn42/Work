@@ -78,17 +78,3 @@ assignment_submit = Button(root, text = "Submit", command=_createAssignment).gri
 root.mainloop()
 
 ################################################################
-
-def timeSystem():
-    """A multi threaded function that keeps track of time and starts events when the time is reached"""
-    _time = [0,0,0]
-    while True:
-        time.sleep(1)
-        _time[2] += 1
-        if _time[2] >= 60:
-            _time[2] = 0
-            _time[1] += 1
-        elif _time[1] >= 60:
-            _time[1] = 0
-            _time[0] += 1
-        print(_time)

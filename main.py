@@ -107,3 +107,4 @@ def studentEvents(event):
                         student["totalPoints"] += 1
                 elif event == "CustomEvent":
                     student["totalPoints"] += 1
+

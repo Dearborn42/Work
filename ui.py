@@ -79,20 +79,16 @@ root.mainloop()
 
 ################################################################
 
-# import the time module
-
-
-def countdown(t):
-
-    while t:
-        mins, secs = divmod(t, 60)
-        timer = '{:02d}:{:02d}'.format(mins, secs)
-        print(timer, end="\r")
+def timeSystem():
+    """A multi threaded function that keeps track of time and starts events when the time is reached"""
+    _time = [0,0,0]
+    while True:
         time.sleep(1)
-        t += 1
-        if t == 120:
-            t = 1
-
-
-t = 1
-#countdown(int(t))
+        _time[2] += 1
+        if _time[2] >= 60:
+            _time[2] = 0
+            _time[1] += 1
+        elif _time[1] >= 60:
+            _time[1] = 0
+            _time[0] += 1
+        print(_time)

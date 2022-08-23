@@ -11,9 +11,7 @@ root.title("School control panel")
 
 def _createStudents():
     createStudents(int(studentsNum.get()))
-    Label(root, text="Added " + studentsNum.get() +
-          " Students").grid(row=5, column=0)
-    # myLabel.pack()
+    Log("Generated " + studentsNum.get() + " students. ")
 
 
 def _createEvents():
@@ -21,7 +19,9 @@ def _createEvents():
 
 
 def _createAssignment():
-    print()
+    totalScore = assignmentCreation(int(Choice1.get()))
+    Log("Created " + assignment.get() + " Assignment")
+    Log("Total Score: " + str(totalScore) + "%")
 
 
 # Choose how many students
@@ -41,8 +41,10 @@ logs.grid(row=11, column=0)
 logsScroll = Scrollbar(root)
 logsScroll.grid(row=12, column=1, sticky='ns')
 LogsList = Listbox(root, yscrollcommand = logsScroll.set )
-for line in range(1, 100): 
-    LogsList.insert(END, "Number " + str(line)) 
+
+def Log(message):
+    LogsList.insert(END, str(message))
+
 LogsList.grid(row=12, column=0)  
  
 logsScroll.config(command = LogsList.yview) 
@@ -72,7 +74,7 @@ assignmentRadio4.grid(row=9, column=0)
 assignment = Entry(root)
 assignment.grid(row=10, column=0)
 assignment.insert(0, "type assignment name...")
-assignment_submit = Button(root, text = "Submit", command=_createStudents).grid(row=10, column=2)
+assignment_submit = Button(root, text = "Submit", command=_createAssignment).grid(row=10, column=2)
 root.mainloop()
 
 ################################################################

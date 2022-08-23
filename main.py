@@ -1,18 +1,7 @@
 from asyncio.windows_events import NULL
 import random,names,json,time,math
 
-
-# input time in seconds
-
-
 fileName = 'students.json'
-
-# Important data that will be used in the code "I think this should be able to be changed by input" -Jacob
-
-# turns numStudents into that many classes
-
-# Finds highest number first run through, second run through it finds second highest, thrid run through is finds the third highest
-
 
 def createStudents(numStudents):
     global studentsNum
@@ -30,7 +19,6 @@ def createStudents(numStudents):
         _studentId = "10" + str(i)
 
         # Random grade level: 0 is freshmen - 3 is senior
-
         gradeLevel = random.choice([9,10,11,12])
 
         # Turns student data into a dictionary
@@ -56,7 +44,6 @@ def createStudents(numStudents):
             fileData["studentsNumber"] += 1
             file.seek(0)
             json.dump(fileData, file, indent=4)
-
 
 def pointsLeaderboard():
     """Function that returns the top of the leaderboard"""
@@ -90,3 +77,10 @@ def assignmentCreation(subject):
         totalScore = int(math.ceil(sum(allScores) / len(allScores)))
         json.dump(fileData, file, indent=4)
         return totalScore
+
+def studentEvents(event):
+    """Function that creates or lets students participate in events."""
+    def FootballEvent():
+        print()
+    def FootballEvent():
+        print()

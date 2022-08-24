@@ -143,6 +143,3 @@ def simulation():
             elif _time[1] >= 60:
                 _time[1] = 0
                 _time[0] += 1
-
-
-simulation()

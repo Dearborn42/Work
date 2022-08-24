@@ -1,7 +1,7 @@
 import time
 from time import strftime
 from tkinter import *
-from main import createStudents, assignmentCreation
+from main import createStudents, assignmentCreation, simulation
 import asyncio
 root = Tk()
 root.title("School control panel")
@@ -19,7 +19,8 @@ def _createEvents():
 
 
 def _simulate():
-    print()
+    Log("Sim started")
+    simulation()
 
 
 def _createAssignment():

@@ -54,8 +54,6 @@ Choice1 = IntVar()
 Label(root, text = "Create an assignment:").grid(row=5, column=0)
 assignmentRadio1 = Radiobutton(root, text = "Math", variable = Choice1, value = 1)
 assignmentRadio1.grid(row=6, column=0)
-
-# English assignment button
 Label(root, text = "Create an assignment:").grid(row=5, column=0)
 assignmentRadio2 = Radiobutton(root, text = "English", variable = Choice1, value = 2)
 assignmentRadio2.grid(row=7, column=0)

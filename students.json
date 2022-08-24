@@ -1,6 +1,112 @@
 {
-    "students": [],
-    "studentsNumber": 0,
+    "students": [
+        {
+            "firstName": "Cindy",
+            "lastName": "Czarnota",
+            "gradeLevel": 10,
+            "gender": "female",
+            "studentId": "100",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                88,
+                85,
+                86,
+                48
+            ],
+            "subjectSkills": [
+                58,
+                58,
+                82,
+                57
+            ]
+        },
+        {
+            "firstName": "Dana",
+            "lastName": "Hoffman",
+            "gradeLevel": 9,
+            "gender": "female",
+            "studentId": "101",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                81,
+                74,
+                97,
+                91
+            ],
+            "subjectSkills": [
+                42,
+                64,
+                74,
+                58
+            ]
+        },
+        {
+            "firstName": "Irma",
+            "lastName": "Miller",
+            "gradeLevel": 11,
+            "gender": "female",
+            "studentId": "102",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                78,
+                76,
+                90,
+                95
+            ],
+            "subjectSkills": [
+                74,
+                31,
+                58,
+                98
+            ]
+        },
+        {
+            "firstName": "Adrian",
+            "lastName": "Smith",
+            "gradeLevel": 10,
+            "gender": "male",
+            "studentId": "103",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                63,
+                86,
+                85,
+                77
+            ],
+            "subjectSkills": [
+                39,
+                36,
+                48,
+                20
+            ]
+        },
+        {
+            "firstName": "Alvin",
+            "lastName": "Good",
+            "gradeLevel": 12,
+            "gender": "male",
+            "studentId": "104",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                85,
+                55,
+                68,
+                96
+            ],
+            "subjectSkills": [
+                86,
+                64,
+                90,
+                35
+            ]
+        }
+    ],
+    "studentsNumber": 5,
     "assignmentNumber": 1,
     "studentCouncil": []
 }

@@ -109,17 +109,14 @@ def studentEvents(event):
             if canAttend == True and student["personality"]["happiness"] >= 60:
                 if event in sports:
                     student["totalPoints"] += 1
-
                 elif event in nonsports:
                     if student["Intelligence"] >= 80:
                         possibleWinners.append(student["studentId"])
                         student["totalPoints"] += 1
-
                 elif event == "CouncilElections":
                     if student["Intelligence"] >= 60 and student["studentGrade"] >= 70:
                         possibleStudentCouncil.append(student["studentId"])
                         student["totalPoints"] += 1
-
                 elif event == "CustomEvent":
                     student["totalPoints"] += 1
 
@@ -130,11 +127,15 @@ def simulation():
     while True:
         time.sleep(1)
         _time[2] += 1
+        print(_time)
         if _time[2] == 60:
             assignmentCreation(0)
             assignmentCreation(1)
             assignmentCreation(2)
             assignmentCreation(3)
+        elif _time[1] in [5, 10, 15, 20, 25, 30]:  # and more
+            studentEvents[random.choice["football", "soccer", "baseball", "volleyball,",
+                                        "softball", "SpellingBee", "Fbla", "ChessTournament", "ChessTournament", ]]
         else:
             if _time[2] >= 60:
                 _time[2] = 0
@@ -142,7 +143,6 @@ def simulation():
             elif _time[1] >= 60:
                 _time[1] = 0
                 _time[0] += 1
-            print(_time)
 
 
 simulation()

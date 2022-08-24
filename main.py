@@ -1,9 +1,5 @@
 from asyncio.windows_events import NULL
-import random
-import names
-import json
-import time
-import math
+import random,names,json,time,math
 
 fileName = 'students.json'
 

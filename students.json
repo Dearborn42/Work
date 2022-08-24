@@ -6,7 +6,7 @@
             "gradeLevel": 12,
             "gender": "female",
             "studentId": "100",
-            "studentGrade": 73.55273712021298,
+            "studentGrade": 72.75705109955271,
             "totalPoints": 0,
             "personality": [
                 98,
@@ -27,7 +27,7 @@
             "gradeLevel": 12,
             "gender": "female",
             "studentId": "101",
-            "studentGrade": 83.66033547706903,
+            "studentGrade": 81.04530597951714,
             "totalPoints": 0,
             "personality": [
                 84,
@@ -41,9 +41,114 @@
                 71,
                 72
             ]
+        },
+        {
+            "firstName": "Carroll",
+            "lastName": "Kirk",
+            "gradeLevel": 12,
+            "gender": "male",
+            "studentId": "100",
+            "studentGrade": 79.66000501944654,
+            "totalPoints": 0,
+            "personality": [
+                54,
+                87,
+                78,
+                98
+            ],
+            "subjectSkills": [
+                75,
+                75,
+                80,
+                52
+            ]
+        },
+        {
+            "firstName": "Tammy",
+            "lastName": "Barnett",
+            "gradeLevel": 10,
+            "gender": "female",
+            "studentId": "101",
+            "studentGrade": 67.71733283814974,
+            "totalPoints": 0,
+            "personality": [
+                87,
+                64,
+                77,
+                43
+            ],
+            "subjectSkills": [
+                45,
+                79,
+                67,
+                24
+            ]
+        },
+        {
+            "firstName": "Walter",
+            "lastName": "Meier",
+            "gradeLevel": 12,
+            "gender": "male",
+            "studentId": "102",
+            "studentGrade": 76.27121099932847,
+            "totalPoints": 0,
+            "personality": [
+                93,
+                45,
+                95,
+                67
+            ],
+            "subjectSkills": [
+                35,
+                34,
+                80,
+                52
+            ]
+        },
+        {
+            "firstName": "Brent",
+            "lastName": "Kershner",
+            "gradeLevel": 12,
+            "gender": "male",
+            "studentId": "103",
+            "studentGrade": 76.00158700802277,
+            "totalPoints": 0,
+            "personality": [
+                89,
+                48,
+                97,
+                78
+            ],
+            "subjectSkills": [
+                88,
+                41,
+                68,
+                42
+            ]
+        },
+        {
+            "firstName": "Paul",
+            "lastName": "Bishop",
+            "gradeLevel": 11,
+            "gender": "male",
+            "studentId": "104",
+            "studentGrade": 80.6879366655412,
+            "totalPoints": 0,
+            "personality": [
+                99,
+                90,
+                59,
+                69
+            ],
+            "subjectSkills": [
+                77,
+                77,
+                68,
+                58
+            ]
         }
     ],
-    "studentsNumber": 2,
-    "assignmentNumber": 33,
+    "studentsNumber": 7,
+    "assignmentNumber": 70,
     "studentCouncil": []
 }

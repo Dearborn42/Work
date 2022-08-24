@@ -8,20 +8,6 @@ import math
 fileName = 'students.json'
 
 
-def _timeSystem():
-    """A multi threaded function that keeps track of time and starts events when the time is reached"""
-    _time = [0, 0, 0]
-    while True:
-        _time[2] += 1
-        if _time[2] >= 60:
-            _time[2] = 0
-            _time[1] += 1
-        elif _time[1] >= 60:
-            _time[1] = 0
-            _time[0] += 1
-        print(_time)
-
-
 def createStudents(numStudents):
     global studentsNum
     """Function that creates students from numStudents"""
@@ -133,3 +119,30 @@ def studentEvents(event):
                         student["totalPoints"] += 1
                 elif event == "CustomEvent":
                     student["totalPoints"] += 1
+
+
+def simulation():
+    """A multi threaded function that keeps track of time and starts events when the time is reached"""
+    _time = [0, 0, 0]
+    while True:
+        time.sleep(1)
+        _time[2] += 1
+        print(_time)
+        if _time[2] == 60:
+            assignmentCreation(0)
+            assignmentCreation(1)
+            assignmentCreation(2)
+            assignmentCreation(3)
+        elif _time[1] in [5, 10, 15, 20, 25, 30]:  # and more
+            studentEvents[random.choice["football", "soccer", "baseball", "volleyball,",
+                                        "softball", "SpellingBee", "Fbla", "ChessTournament", "ChessTournament", ]]
+        else:
+            if _time[2] >= 60:
+                _time[2] = 0
+                _time[1] += 1
+            elif _time[1] >= 60:
+                _time[1] = 0
+                _time[0] += 1
+
+
+simulation()

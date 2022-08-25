@@ -104,9 +104,114 @@
                 94,
                 80
             ]
+        },
+        {
+            "firstName": "Sherry",
+            "lastName": "Bravo",
+            "gradeLevel": 9,
+            "gender": "female",
+            "studentId": "100",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                84,
+                97,
+                90,
+                52
+            ],
+            "subjectSkills": [
+                91,
+                33,
+                77,
+                65
+            ]
+        },
+        {
+            "firstName": "Richard",
+            "lastName": "Juares",
+            "gradeLevel": 11,
+            "gender": "male",
+            "studentId": "101",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                73,
+                69,
+                82,
+                90
+            ],
+            "subjectSkills": [
+                79,
+                82,
+                66,
+                66
+            ]
+        },
+        {
+            "firstName": "Leandra",
+            "lastName": "Wagner",
+            "gradeLevel": 9,
+            "gender": "female",
+            "studentId": "102",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                64,
+                99,
+                63,
+                48
+            ],
+            "subjectSkills": [
+                36,
+                37,
+                61,
+                40
+            ]
+        },
+        {
+            "firstName": "Joanne",
+            "lastName": "Quiles",
+            "gradeLevel": 11,
+            "gender": "female",
+            "studentId": "103",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                89,
+                43,
+                93,
+                92
+            ],
+            "subjectSkills": [
+                38,
+                74,
+                98,
+                76
+            ]
+        },
+        {
+            "firstName": "Dong",
+            "lastName": "Daniels",
+            "gradeLevel": 10,
+            "gender": "male",
+            "studentId": "104",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                57,
+                82,
+                90,
+                98
+            ],
+            "subjectSkills": [
+                81,
+                68,
+                96,
+                40
+            ]
         }
     ],
-    "studentsNumber": 5,
+    "studentsNumber": 10,
     "assignmentNumber": 1,
     "studentCouncil": []
 }

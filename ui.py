@@ -238,7 +238,7 @@ class App:
 
 
     def GButton_671_command(self):
-        Log("b")
+        simulation()
 
 
     def GRadio_909_command(self):

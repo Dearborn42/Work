@@ -109,3 +109,34 @@ def studentEvents(event):
                         student["totalPoints"] += 1
                 elif event == "CustomEvent":
                     student["totalPoints"] += 1
+
+
+
+def simulation():
+    """A multi threaded function that keeps track of time and starts events when the time is reached"""
+    _time = [0, 0, 0]
+    while True:
+        time.sleep(1)
+        _time[2] += 1
+        print(_time)
+        if _time[2] == 60:
+            assignmentCreation(0)
+            assignmentCreation(1)
+            assignmentCreation(2)
+            assignmentCreation(3)
+        # elif _time[1] in [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]:  # and more
+        #    studentEvents[random.choice["football", "soccer", "baseball", "volleyball,",
+        #                                "softball", "SpellingBee", "Fbla", "ChessTournament", "ChessTournament", "CouncilElections"]]
+        else:
+            if _time[2] >= 59:
+                _time[2] = 0
+                _time[1] += 1
+            elif _time[1] >= 5:
+                _time[1] = 0
+                with open(fileName, 'r+') as file:
+                    fileData = json.load(file)
+                    students = fileData["students"]
+                    for i in range(fileData["studentsNumber"]):
+                        student = students[i]
+                        student["studentGrade"] = 100
+

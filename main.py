@@ -139,4 +139,3 @@ def simulation():
                     for i in range(fileData["studentsNumber"]):
                         student = students[i]
                         student["studentGrade"] = 100
-

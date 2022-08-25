@@ -1,217 +1,112 @@
 {
     "students": [
         {
-            "firstName": "Felisha",
-            "lastName": "Breen",
-            "gradeLevel": 11,
-            "gender": "female",
+            "firstName": "Michael",
+            "lastName": "Ballard",
+            "gradeLevel": 12,
+            "gender": "male",
             "studentId": "100",
             "studentGrade": 100,
             "totalPoints": 0,
             "personality": [
-                71,
-                53,
-                60,
-                90
-            ],
-            "subjectSkills": [
-                74,
                 63,
-                58,
-                96
-            ]
-        },
-        {
-            "firstName": "Alvin",
-            "lastName": "Goodrich",
-            "gradeLevel": 12,
-            "gender": "male",
-            "studentId": "101",
-            "studentGrade": 100,
-            "totalPoints": 0,
-            "personality": [
-                100,
-                54,
-                64,
-                77
-            ],
-            "subjectSkills": [
-                32,
-                38,
-                95,
-                85
-            ]
-        },
-        {
-            "firstName": "Joseph",
-            "lastName": "Lauridsen",
-            "gradeLevel": 12,
-            "gender": "male",
-            "studentId": "102",
-            "studentGrade": 100,
-            "totalPoints": 0,
-            "personality": [
-                95,
-                85,
-                56,
-                74
-            ],
-            "subjectSkills": [
-                31,
-                77,
-                74,
-                96
-            ]
-        },
-        {
-            "firstName": "Jesus",
-            "lastName": "Michael",
-            "gradeLevel": 11,
-            "gender": "male",
-            "studentId": "103",
-            "studentGrade": 100,
-            "totalPoints": 0,
-            "personality": [
-                86,
-                71,
-                75,
-                96
-            ],
-            "subjectSkills": [
-                85,
-                54,
-                88,
-                55
-            ]
-        },
-        {
-            "firstName": "Mary",
-            "lastName": "Roy",
-            "gradeLevel": 11,
-            "gender": "female",
-            "studentId": "104",
-            "studentGrade": 100,
-            "totalPoints": 0,
-            "personality": [
-                80,
-                65,
-                90,
-                65
-            ],
-            "subjectSkills": [
-                97,
-                51,
-                94,
-                80
-            ]
-        },
-        {
-            "firstName": "Sherry",
-            "lastName": "Bravo",
-            "gradeLevel": 9,
-            "gender": "female",
-            "studentId": "100",
-            "studentGrade": 100,
-            "totalPoints": 0,
-            "personality": [
-                84,
-                97,
-                90,
-                52
-            ],
-            "subjectSkills": [
-                91,
-                33,
-                77,
-                65
-            ]
-        },
-        {
-            "firstName": "Richard",
-            "lastName": "Juares",
-            "gradeLevel": 11,
-            "gender": "male",
-            "studentId": "101",
-            "studentGrade": 100,
-            "totalPoints": 0,
-            "personality": [
-                73,
-                69,
+                62,
                 82,
-                90
+                54
             ],
             "subjectSkills": [
                 79,
-                82,
-                66,
-                66
-            ]
-        },
-        {
-            "firstName": "Leandra",
-            "lastName": "Wagner",
-            "gradeLevel": 9,
-            "gender": "female",
-            "studentId": "102",
-            "studentGrade": 100,
-            "totalPoints": 0,
-            "personality": [
-                64,
-                99,
-                63,
-                48
-            ],
-            "subjectSkills": [
-                36,
-                37,
-                61,
-                40
-            ]
-        },
-        {
-            "firstName": "Joanne",
-            "lastName": "Quiles",
-            "gradeLevel": 11,
-            "gender": "female",
-            "studentId": "103",
-            "studentGrade": 100,
-            "totalPoints": 0,
-            "personality": [
-                89,
-                43,
                 93,
-                92
-            ],
-            "subjectSkills": [
-                38,
-                74,
-                98,
+                88,
                 76
             ]
         },
         {
-            "firstName": "Dong",
-            "lastName": "Daniels",
+            "firstName": "Lawrence",
+            "lastName": "Saunders",
+            "gradeLevel": 11,
+            "gender": "male",
+            "studentId": "101",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                57,
+                51,
+                82,
+                93
+            ],
+            "subjectSkills": [
+                92,
+                55,
+                78,
+                52
+            ]
+        },
+        {
+            "firstName": "Raymond",
+            "lastName": "Smith",
+            "gradeLevel": 11,
+            "gender": "male",
+            "studentId": "102",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                54,
+                97,
+                86,
+                85
+            ],
+            "subjectSkills": [
+                72,
+                76,
+                48,
+                72
+            ]
+        },
+        {
+            "firstName": "James",
+            "lastName": "Phillips",
+            "gradeLevel": 9,
+            "gender": "male",
+            "studentId": "103",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                60,
+                82,
+                90,
+                94
+            ],
+            "subjectSkills": [
+                55,
+                60,
+                58,
+                78
+            ]
+        },
+        {
+            "firstName": "Robert",
+            "lastName": "Palacios",
             "gradeLevel": 10,
             "gender": "male",
             "studentId": "104",
             "studentGrade": 100,
             "totalPoints": 0,
             "personality": [
-                57,
-                82,
-                90,
-                98
+                85,
+                71,
+                60,
+                54
             ],
             "subjectSkills": [
-                81,
-                68,
                 96,
-                40
+                56,
+                69,
+                76
             ]
         }
     ],
-    "studentsNumber": 10,
+    "studentsNumber": 5,
     "assignmentNumber": 1,
     "studentCouncil": []
 }

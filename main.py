@@ -35,7 +35,6 @@ def createStudents(numStudents):
             'studentId': _studentId,
             'studentGrade': 100,
             'totalPoints': 0,
-
             # [Intelligence,OnTask,WorkOnTime,Happiness] --Will be used later to calculate assignment scores
             'personality': [random.randint(50, 100), random.randint(40, 100), random.randint(55, 100), random.randint(40, 100)],
             # [Math,English,Science,History]
@@ -58,7 +57,6 @@ def pointsLeaderboard():
     with open(fileName, 'r') as file:
         fileData = json.load(file)
     Leaderboard = fileData["students"]
-
     # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints, studentName]
     Leaderboard.sort(key=lambda x: x["totalScore"], reverse=True)
     for i in range(fileData["studentsNumber"]):
@@ -135,21 +133,15 @@ def simulation():
             assignmentCreation(1)
             assignmentCreation(2)
             assignmentCreation(3)
-        # if time[1] == 2:
-        #     print()
-        # #    studentEvents[random.choice["football", "soccer", "baseball", "volleyball,",
-        # #                                "softball", "SpellingBee", "Fbla", "ChessTournament", "ChessTournament", "CouncilElections"]]
-        if time[1] == 5:
+        if _time[1] >= 5:
             with open(fileName, 'r+') as file:
                 fileData = json.load(file)
                 students = fileData["students"]
                 for i in range(fileData["studentsNumber"]):
                     student = students[i]
-                    student[i]["studentGrade"] = 100
+                    student["studentGrade"] = 100
+            _time[1] = 0
         else:
             if _time[2] >= 60:
                 _time[2] = 0
                 _time[1] += 1
-            elif _time[1] >= 60:
-                _time[1] = 0
-                _time[0] += 1

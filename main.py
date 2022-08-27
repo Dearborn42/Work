@@ -139,17 +139,14 @@ def simulation():
         #     print()
         # #    studentEvents[random.choice["football", "soccer", "baseball", "volleyball,",
         # #                                "softball", "SpellingBee", "Fbla", "ChessTournament", "ChessTournament", "CouncilElections"]]
-        # if time[1] == 5:
-        #      with open(fileName, 'r+') as file:
-        #             fileData = json.load(file)
-        #             students = fileData["students"]
-        #             for i in range(fileData["studentsNumber"]):
-        #                 student = students[i]
-        #                 student[i]["studentGrade"] = 100
-        #      time[1] = 0
-        elif _time[1] in [5, 10, 15, 20, 25, 30]:  # and more
-            studentEvents[random.choice["football", "soccer", "baseball", "volleyball,",
-                                        "softball", "SpellingBee", "Fbla", "ChessTournament", "ChessTournament", ]]
+        if time[1] == 5:
+            with open(fileName, 'r+') as file:
+                fileData = json.load(file)
+                students = fileData["students"]
+                for i in range(fileData["studentsNumber"]):
+                    student = students[i]
+                    student[i]["studentGrade"] = 100
+        else:
             if _time[2] >= 60:
                 _time[2] = 0
                 _time[1] += 1

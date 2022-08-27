@@ -136,9 +136,13 @@ def simulation():
         #                 student = students[i]
         #                 student[i]["studentGrade"] = 100
         #      time[1] = 0
-        else:
-            if _time[2] >= 59:
+        elif _time[1] in [5, 10, 15, 20, 25, 30]:  # and more
+            studentEvents[random.choice["football", "soccer", "baseball", "volleyball,",
+                                        "softball", "SpellingBee", "Fbla", "ChessTournament", "ChessTournament", ]]
+            if _time[2] >= 60:
                 _time[2] = 0
                 _time[1] += 1
-            elif _time[1] >= 5:
+            elif _time[1] >= 60:
                 _time[1] = 0
+                _time[0] += 1
+

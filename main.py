@@ -134,12 +134,6 @@ def simulation():
             assignmentCreation(2)
             assignmentCreation(3)
         if _time[1] >= 5:
-            with open(fileName, 'r+') as file:
-                fileData = json.load(file)
-                students = fileData["students"]
-                for i in range(fileData["studentsNumber"]):
-                    student = students[i]
-                    student["studentGrade"] = 100
             _time[1] = 0
         else:
             if _time[2] >= 60:

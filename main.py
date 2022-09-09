@@ -1,12 +1,7 @@
 from asyncio.windows_events import NULL
-import random
-import names
-import json
-import time
-import math
+import random,names,json,time,math
 
 fileName = 'students.json'
-
 
 def createStudents(numStudents):
     global studentsNum
@@ -93,7 +88,7 @@ def assignmentCreation(subject):
 def studentEvents(event):
     """Function that creates or lets students participate in events."""
 
-    # Still working on this so ignore how some parts may not work
+    # Still being worked on
 
     sports = ["football", "soccer", "baseball", "volleyball,", "softball"]
     nonsports = ["SpellingBee", "Fbla", "ChessTournament", "ChessTournament"]
@@ -123,6 +118,9 @@ def studentEvents(event):
 
 def simulation():
     """A multi threaded function that keeps track of time and starts events when the time is reached"""
+
+    # Still being worked on
+
     _time = [0, 0, 0]
     while True:
         time.sleep(1)
@@ -145,3 +143,7 @@ def simulation():
             if _time[2] >= 60:
                 _time[2] = 0
                 _time[1] += 1
+
+
+if __name__ == "__main__":
+    simulation()

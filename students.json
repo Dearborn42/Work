@@ -1,6 +1,117 @@
-    {
-        "students": [],
-        "studentsNumber": 0,
-        "assignmentNumber": 1,
-        "studentCouncil": []
-    }
+{
+    "students": [
+        {
+            "firstName": "Evelyn",
+            "lastName": "Frank",
+            "gradeLevel": 12,
+            "gender": "female",
+            "studentId": "100",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                98,
+                42,
+                65,
+                73
+            ],
+            "subjectSkills": [
+                60,
+                54,
+                67,
+                83,
+                "reset"
+            ]
+        },
+        {
+            "firstName": "Florence",
+            "lastName": "Hill",
+            "gradeLevel": 11,
+            "gender": "female",
+            "studentId": "101",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                92,
+                52,
+                99,
+                95
+            ],
+            "subjectSkills": [
+                69,
+                84,
+                71,
+                58,
+                "reset"
+            ]
+        },
+        {
+            "firstName": "Jacquline",
+            "lastName": "Sleeper",
+            "gradeLevel": 9,
+            "gender": "female",
+            "studentId": "102",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                83,
+                65,
+                69,
+                86
+            ],
+            "subjectSkills": [
+                73,
+                75,
+                74,
+                23,
+                "reset"
+            ]
+        },
+        {
+            "firstName": "Muriel",
+            "lastName": "Ingram",
+            "gradeLevel": 9,
+            "gender": "female",
+            "studentId": "103",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                79,
+                48,
+                60,
+                44
+            ],
+            "subjectSkills": [
+                52,
+                92,
+                64,
+                57,
+                "reset"
+            ]
+        },
+        {
+            "firstName": "Susan",
+            "lastName": "Thomas",
+            "gradeLevel": 11,
+            "gender": "female",
+            "studentId": "104",
+            "studentGrade": 100,
+            "totalPoints": 0,
+            "personality": [
+                89,
+                64,
+                100,
+                45
+            ],
+            "subjectSkills": [
+                86,
+                65,
+                95,
+                59,
+                "reset"
+            ]
+        }
+    ],
+    "studentsNumber": 5,
+    "assignmentNumber": 165,
+    "studentCouncil": []
+}

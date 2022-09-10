@@ -37,8 +37,8 @@ def createStudents(numStudents):
             'totalPoints': 0,
             # [Intelligence,OnTask,WorkOnTime,Happiness] --Will be used later to calculate assignment scores
             'personality': [random.randint(50, 100), random.randint(40, 100), random.randint(55, 100), random.randint(40, 100)],
-            # [Math,English,Science,History]
-            'subjectSkills': [random.randint(25, 100), random.randint(30, 100), random.randint(45, 100), random.randint(20, 100)]
+            # [Math,English,Science,History, Reset]
+            'subjectSkills': [random.randint(25, 100), random.randint(30, 100), random.randint(45, 100), random.randint(20, 100), "reset"]
         }
 
         # Opens the json file
@@ -74,18 +74,25 @@ def assignmentCreation(subject):
         allScores = []
         for i in range(fileData["studentsNumber"]):
             # Calculates persons grade based on personality and subject skills.
-            score = random.randint(students[i]["subjectSkills"][subject], 101)
-            personality = students[i]["personality"]
-            score = score + \
-                personality[0] + personality[1] + \
-                personality[2] + personality[3]
-            score = score / 5
-            allScores.append(score)
-            students[i]["studentGrade"] = (
-                students[i]["studentGrade"] + score) / 2
+            if subject == 4:
+                students[i]["studentGrade"] = 100
+                score = 100
+                allScores.append(score)
+            else:
+
+                score = random.randint(
+                    students[i]["subjectSkills"][subject], 101)
+                personality = students[i]["personality"]
+                score = score + \
+                    personality[0] + personality[1] + \
+                    personality[2] + personality[3]
+                score = score / 5
+                allScores.append(score)
+                students[i]["studentGrade"] = (
+                    students[i]["studentGrade"] + score) / 2
+        totalScore = int(math.ceil(sum(allScores) / len(allScores)))
         file.seek(0)
         file.truncate()
-        totalScore = int(math.ceil(sum(allScores) / len(allScores)))
         json.dump(fileData, file, indent=4)
         return totalScore
 
@@ -124,7 +131,9 @@ def studentEvents(event):
 def simulation():
     """A multi threaded function that keeps track of time and starts events when the time is reached"""
     _time = [0, 0, 0]
-    while True:
+    _year = 0
+    check = True
+    while check:
         time.sleep(1)
         _time[2] += 1
         print(_time)
@@ -134,7 +143,12 @@ def simulation():
             assignmentCreation(2)
             assignmentCreation(3)
         if _time[1] >= 5:
+            assignmentCreation(4)
+            _year = _year + 1
             _time[1] = 0
+            if _year == 4:
+                check = False
+                print("Year has ended")
         else:
             if _time[2] >= 60:
                 _time[2] = 0

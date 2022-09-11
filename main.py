@@ -55,10 +55,9 @@ def pointsLeaderboard():
     # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints, studentName]
     Leaderboard.sort(key=lambda x: x["totalScore"], reverse=True)
     for i in range(fileData["studentsNumber"]):
-        _Leaderboard.append([Leaderboard[i]['studentId'], Leaderboard[i]['totalScore'],
-                            Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
+        _Leaderboard.append([Leaderboard[i]['studentId'], Leaderboard[i]['totalScore'], Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
     return _Leaderboard
-
+pointsLeaderboard()
 
 def assignmentCreation(subject):
     """Function that creates a new assignment"""
@@ -153,5 +152,5 @@ def simulation():
                 _time[1] += 1
 
 
-if __name__ == "__main__":
-    simulation()
+# if __name__ == "__main__":
+#     simulation()

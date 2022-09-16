@@ -65,9 +65,6 @@ def pointsLeaderboard():
     return _Leaderboard
 
 
-pointsLeaderboard()
-
-
 def assignmentCreation(subject):
     """Function that creates a new assignment"""
     with open(fileName, 'r+') as file:

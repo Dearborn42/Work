@@ -1,7 +1,12 @@
 from asyncio.windows_events import NULL
-import random,names,json,time,math
+import random
+import names
+import json
+import time
+import math
 
 fileName = 'students.json'
+
 
 def createStudents(numStudents):
     global studentsNum
@@ -55,9 +60,13 @@ def pointsLeaderboard():
     # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints, studentName]
     Leaderboard.sort(key=lambda x: x["totalScore"], reverse=True)
     for i in range(fileData["studentsNumber"]):
-        _Leaderboard.append([Leaderboard[i]['studentId'], Leaderboard[i]['totalScore'], Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
+        _Leaderboard.append([Leaderboard[i]['studentId'], Leaderboard[i]['totalScore'],
+                            Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
     return _Leaderboard
+
+
 pointsLeaderboard()
+
 
 def assignmentCreation(subject):
     """Function that creates a new assignment"""
@@ -89,37 +98,6 @@ def assignmentCreation(subject):
         file.truncate()
         json.dump(fileData, file, indent=4)
         return totalScore
-
-
-def studentEvents(event):
-    """Function that creates or lets students participate in events."""
-
-    # Still being worked on
-
-    sports = ["football", "soccer", "baseball", "volleyball,", "softball"]
-    nonsports = ["SpellingBee", "Fbla", "ChessTournament", "ChessTournament"]
-    possibleWinners = []
-    possibleStudentCouncil = []
-
-    with open(fileName, 'r+') as file:
-        fileData = json.load(file)
-        students = fileData["students"]
-        for i in range(len(students)):
-            student = fileData["students"][i]
-            canAttend = bool(random.getrandbits(1))
-            if canAttend == True and student["personality"]["happiness"] >= 60:
-                if event in sports:
-                    student["totalPoints"] += 1
-                elif event in nonsports:
-                    if student["Intelligence"] >= 80:
-                        possibleWinners.append(student["studentId"])
-                        student["totalPoints"] += 1
-                elif event == "CouncilElections":
-                    if student["Intelligence"] >= 60 and student["studentGrade"] >= 70:
-                        possibleStudentCouncil.append(student["studentId"])
-                        student["totalPoints"] += 1
-                elif event == "CustomEvent":
-                    student["totalPoints"] += 1
 
 
 def simulation():

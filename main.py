@@ -1,4 +1,5 @@
 from asyncio.windows_events import NULL
+from operator import le
 import random
 import names
 import json
@@ -53,16 +54,47 @@ def createStudents(numStudents):
 
 def pointsLeaderboard():
     """Function that returns the top of the leaderboard"""
-    _Leaderboard = []
+    leaderboard = [[NULL, NULL, NULL], [NULL, NULL, NULL], [NULL,
+                   NULL, NULL], [NULL, NULL, NULL], [NULL, NULL, NULL]]
     with open(fileName, 'r') as file:
         fileData = json.load(file)
-    Leaderboard = fileData["students"]
-    # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints, studentName]
-    Leaderboard.sort(key=lambda x: x["totalScore"], reverse=True)
+        students = fileData["students"]
+    topStudent = 0
+    topSenior = 0
+    topJunior = 0
+    topSophmore = 0
+    topFreshman = 0
     for i in range(fileData["studentsNumber"]):
-        _Leaderboard.append([Leaderboard[i]['studentId'], Leaderboard[i]['totalScore'],
-                            Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
-    return _Leaderboard
+        if students[i]["gradeLevel"] == 9:
+            if students[i]["studentGrade"] > topFreshman:
+                topFreshman = students[i]["studentGrade"]
+                leaderboard[1][0] = students[i]['firstName']
+                leaderboard[1][1] = students[i]['lastName']
+                leaderboard[1][2] = topFreshman
+        if students[i]["gradeLevel"] == 10:
+            if students[i]["studentGrade"] > topSophmore:
+                topSophmore = students[i]["studentGrade"]
+                leaderboard[2][0] = students[i]['firstName']
+                leaderboard[2][1] = students[i]['lastName']
+                leaderboard[2][2] = topSophmore
+        if students[i]["gradeLevel"] == 11:
+            if students[i]["studentGrade"] > topJunior:
+                topJunior = students[i]["studentGrade"]
+                leaderboard[3][0] = students[i]['firstName']
+                leaderboard[3][1] = students[i]['lastName']
+                leaderboard[3][2] = topJunior
+        if students[i]["gradeLevel"] == 12:
+            if students[i]["studentGrade"] > topSenior:
+                topSenior = students[i]["studentGrade"]
+                leaderboard[4][0] = students[i]['firstName']
+                leaderboard[4][1] = students[i]['lastName']
+                leaderboard[4][2] = topSenior
+        if students[i]["studentGrade"] > topStudent:
+            topStudent = students[i]["studentGrade"]
+            leaderboard[0][0] = students[i]['firstName']
+            leaderboard[0][1] = students[i]['lastName']
+            leaderboard[0][2] = topStudent
+    print(leaderboard)
 
 
 def assignmentCreation(subject):
@@ -114,7 +146,8 @@ def simulation():
             assignmentCreation(1)
             assignmentCreation(2)
             assignmentCreation(3)
-        if _time[1] >= 5:
+        if _time[1] >= 1:
+            pointsLeaderboard()
             assignmentCreation(4)
             _year = _year + 1
             _time[1] = 0

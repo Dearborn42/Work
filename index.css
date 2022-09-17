@@ -1,0 +1,43 @@
+#text{
+    font-size:50px;
+}
+
+#text2{
+    font-size: 20px;
+}
+
+body{
+    background-image:linear-gradient(to right, #FF671A, #FF8100);
+}
+
+#box{
+    width:200px;
+    height:20px;
+}
+
+#head{
+    width:1517px;
+    border:2px solid #000000;
+}
+
+#side{
+    position:fixed;
+    top:140px;
+    width:920px;
+    height:650px;
+    border:2px solid #000000;
+}
+
+#main{
+    position:fixed;
+    left:945px;
+    top:140px;
+    width:580px;
+    height:650px;
+    border:2px solid #000000;
+}
+
+#div{
+    font-size: 20px;
+    float:left;
+}

@@ -52,10 +52,12 @@ def createStudents(numStudents):
             json.dump(fileData, file, indent=4)
 
 
+leaderboard = [[NULL, NULL, NULL], [NULL, NULL, NULL], [NULL,
+                                                        NULL, NULL], [NULL, NULL, NULL], [NULL, NULL, NULL]]
+
+
 def pointsLeaderboard():
     """Function that returns the top of the leaderboard"""
-    leaderboard = [[NULL, NULL, NULL], [NULL, NULL, NULL], [NULL,
-                   NULL, NULL], [NULL, NULL, NULL], [NULL, NULL, NULL]]
     with open(fileName, 'r') as file:
         fileData = json.load(file)
         students = fileData["students"]
@@ -64,6 +66,7 @@ def pointsLeaderboard():
     topJunior = 0
     topSophmore = 0
     topFreshman = 0
+
     for i in range(fileData["studentsNumber"]):
         if students[i]["gradeLevel"] == 9:
             if students[i]["studentGrade"] > topFreshman:
@@ -71,30 +74,42 @@ def pointsLeaderboard():
                 leaderboard[1][0] = students[i]['firstName']
                 leaderboard[1][1] = students[i]['lastName']
                 leaderboard[1][2] = topFreshman
+
         if students[i]["gradeLevel"] == 10:
             if students[i]["studentGrade"] > topSophmore:
                 topSophmore = students[i]["studentGrade"]
                 leaderboard[2][0] = students[i]['firstName']
                 leaderboard[2][1] = students[i]['lastName']
                 leaderboard[2][2] = topSophmore
+
         if students[i]["gradeLevel"] == 11:
             if students[i]["studentGrade"] > topJunior:
                 topJunior = students[i]["studentGrade"]
                 leaderboard[3][0] = students[i]['firstName']
                 leaderboard[3][1] = students[i]['lastName']
                 leaderboard[3][2] = topJunior
+
         if students[i]["gradeLevel"] == 12:
             if students[i]["studentGrade"] > topSenior:
                 topSenior = students[i]["studentGrade"]
                 leaderboard[4][0] = students[i]['firstName']
                 leaderboard[4][1] = students[i]['lastName']
                 leaderboard[4][2] = topSenior
+
         if students[i]["studentGrade"] > topStudent:
             topStudent = students[i]["studentGrade"]
             leaderboard[0][0] = students[i]['firstName']
             leaderboard[0][1] = students[i]['lastName']
             leaderboard[0][2] = topStudent
     print(leaderboard)
+
+
+def createEvent():
+    events = ['footballGame', 'basketballGame', 'soccerGame', 'tennisGame',
+              'volleyballGame', 'prom', 'fundraiser', 'bakingComp', 'clubsNight', 'fbla']
+    with open(fileName, 'r+') as file:
+        fileData = json.load(file)
+        students = fileData["students"]
 
 
 def assignmentCreation(subject):

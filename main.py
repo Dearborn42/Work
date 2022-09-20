@@ -112,11 +112,10 @@ def createEvent():
         fileData = json.load(file)
         students = fileData["students"]
     for i in range(fileData["studentsNumber"]):
-        attendChance = random.randint(0, 2)
-        if attendChance == 1:
-            students[i]['totalPoints'] += 1
-        else:
-            students[i]['totalPoints'] = students[i]['totalPoints']
+        chance = random.randint(0, 1)
+        print(chance)
+        if chance == 1:
+            students[i]["totalPoints"] += 1
 
 
 def assignmentCreation(subject):
@@ -168,13 +167,10 @@ def simulation():
             assignmentCreation(1)
             assignmentCreation(2)
             assignmentCreation(3)
-        if _time[1] % 2 == 0:
-            createEvent()
         if _time[1] >= 5:
             pointsLeaderboard()
             assignmentCreation(4)
             _year = _year + 1
-            _time[1] = 0
             if _year == 4:
                 check = False
                 print("Year has ended")

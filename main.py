@@ -105,17 +105,17 @@ def pointsLeaderboard():
     print(leaderboard)
 
 
-def createEvent():
-    events = ['footballGame', 'basketballGame', 'soccerGame', 'tennisGame',
-              'volleyballGame', 'prom', 'fundraiser', 'bakingComp', 'clubsNight', 'fbla']
-    with open(fileName, 'r+') as file:
-        fileData = json.load(file)
-        students = fileData["students"]
-    for i in range(fileData["studentsNumber"]):
-        chance = random.randint(0, 1)
-        print(chance)
-        if chance == 1:
-            students[i]["totalPoints"] += 1
+# def createEvent():
+#     events = ['footballGame', 'basketballGame', 'soccerGame', 'tennisGame',
+#               'volleyballGame', 'prom', 'fundraiser', 'bakingComp', 'clubsNight', 'fbla']
+#     with open(fileName, 'r+') as file:
+#         fileData = json.load(file)
+#         students = fileData["students"]
+#     for i in range(fileData["studentsNumber"]):
+#         chance = random.randint(0, 1)
+#         print(chance)
+#         if chance == 1:
+#             students[i]["totalPoints"] += 1
 
 
 def assignmentCreation(subject):
@@ -170,6 +170,7 @@ def simulation():
         if _time[1] >= 5:
             pointsLeaderboard()
             assignmentCreation(4)
+            _time[1] = 0
             _year = _year + 1
             if _year == 4:
                 check = False

@@ -52,8 +52,8 @@ def createStudents(numStudents):
             json.dump(fileData, file, indent=4)
 
 
-leaderboard = [[NULL, NULL, NULL], [NULL, NULL, NULL], [NULL,
-                                                        NULL, NULL], [NULL, NULL, NULL], [NULL, NULL, NULL]]
+leaderboard = [[NULL, NULL, NULL], [NULL, NULL, NULL], [
+    NULL, NULL, NULL], [NULL, NULL, NULL], [NULL, NULL, NULL]]
 
 
 def pointsLeaderboard():
@@ -105,17 +105,19 @@ def pointsLeaderboard():
     print(leaderboard)
 
 
-# def createEvent():
-#     events = ['footballGame', 'basketballGame', 'soccerGame', 'tennisGame',
-#               'volleyballGame', 'prom', 'fundraiser', 'bakingComp', 'clubsNight', 'fbla']
-#     with open(fileName, 'r+') as file:
-#         fileData = json.load(file)
-#         students = fileData["students"]
-#     for i in range(fileData["studentsNumber"]):
-#         chance = random.randint(0, 1)
-#         print(chance)
-#         if chance == 1:
-#             students[i]["totalPoints"] += 1
+def createEvent():
+    events = ['footballGame', 'basketballGame', 'soccerGame', 'tennisGame',
+              'volleyballGame', 'prom', 'fundraiser', 'bakingComp', 'clubsNight', 'fbla', 'rugbyGame', 'lacrossGame']
+    with open(fileName, 'r+') as file:
+        fileData = json.load(file)
+        students = fileData["students"]
+        for i in range(fileData["studentsNumber"]):
+            chance = random.randint(0, 1)
+            print(chance)
+            students[i]['totalPoints'] = students[i]['totalPoints'] + chance
+            file.seek(0)
+            file.truncate()
+            json.dump(fileData, file, indent=4)
 
 
 def assignmentCreation(subject):
@@ -143,11 +145,9 @@ def assignmentCreation(subject):
                 allScores.append(score)
                 students[i]["studentGrade"] = (
                     students[i]["studentGrade"] + score) / 2
-        totalScore = int(math.ceil(sum(allScores) / len(allScores)))
         file.seek(0)
         file.truncate()
         json.dump(fileData, file, indent=4)
-        return totalScore
 
 
 def simulation():
@@ -159,7 +159,7 @@ def simulation():
     _year = 0
     check = True
     while check:
-        time.sleep(1)
+        time.sleep(.05)
         _time[2] += 1
         print(_time)
         if _time[2] % 30 == 0:
@@ -168,6 +168,9 @@ def simulation():
             assignmentCreation(2)
             assignmentCreation(3)
         if _time[1] >= 5:
+            createEvent()
+            createEvent()
+            createEvent()
             pointsLeaderboard()
             assignmentCreation(4)
             _time[1] = 0

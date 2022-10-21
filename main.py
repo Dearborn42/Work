@@ -14,13 +14,9 @@ def createStudents(numStudents):
     """Function that creates students from numStudents"""
     for i in range(numStudents):
         # Chooses if student is going to be a male or female by random boolean value
-        genderBool = random.getrandbits(1)
-        if genderBool == True:
-            _studentFirstName = names.get_first_name(gender='male')
-            _studentGender = "male"
-        else:
-            _studentFirstName = names.get_first_name(gender='female')
-            _studentGender = "female"
+        gender = random.choice(["male", "female"])
+        _studentFirstName = names.get_first_name(gender=gender)
+        _studentGender = gender
         _studentLastName = names.get_last_name()
         _studentId = "10" + str(i)
 

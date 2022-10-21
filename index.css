@@ -16,25 +16,26 @@ body{
     float:left;
 }
 
-#head{
-    width:1517px;
+header{
+    width:100%;
+    height:20%;
     border:2px solid #000000;
 }
 
-#side{
+main{
     position:fixed;
     top:140px;
-    width:920px;
-    height:650px;
+    width:60%;
+    height:60%;
     border:2px solid #000000;
 }
 
-#main{
+aside{
     position:fixed;
-    left:945px;
+    left:61%;
     top:140px;
-    width:580px;
-    height:650px;
+    width:38.5%;
+    height:60%;
     border:2px solid #000000;
 }
 

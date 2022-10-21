@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="Noah Santos">
+    <meta name="description" content="Testing code from notes">
+    <meta property="og:image" content="URL to image">
+    <meta property="og:description" content="short description about your page">
+    <meta property="og:title" content="Title">
+    <meta charset="ISO-8859-1">
+    <link rel="icon" href="./west-mec favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./test.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item-a">
+            <center><h1>Control Panel</h1></center>
+        </div>
+
+        <div class="item-e">
+            <center>
+                <img src="west-mec.png" alt="tiger mascot">
+            </center>
+        </div>
+
+        <div class="item-b">
+            <center><h1>Action</h1></center>
+            <form>
+                <fieldset>
+                    <legend>Add Students</legend>
+                    <label for="num">Enter number of students:</label>
+                    <input type="text" id="num" name="student" required>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+
+            <form>
+                <fieldset>
+                    <legend>Creating Assignments</legend>
+                    <label for="type">Type of assignment:</label>
+                    <ul>
+                        <li>
+                            <input type="radio" id="math" name="type" required>
+                            <label for="math">Math</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="english" name="type" required>
+                            <label for="english">English</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="science" name="type" required>
+                            <label for="science">Science</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="history" name="type" required>
+                            <label for="history">History</label>
+                        </li>
+                    </ul>
+                    <label for="name">Assignment Name:</label>
+                    <input type="text" id="name" name="type" required>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+
+            <form>
+                <fieldset>
+                    <legend>Creating Events</legend>
+                    <label for="type">Type of event:</label>
+                    <ul>
+                        <li>
+                            <input type="radio" id="sport" name="type" required>
+                            <label for="sport">Sport</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="non-sport" name="type" required>
+                            <label for="non-sprt">Non-Sport</label>
+                        </li>
+                    </ul>
+                    <label for="name">Event Name:</label>
+                    <input type="text" id="name" name="type" required>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="item-f">
+            <center>
+                <h1>Simulate</h1>
+            </center>
+            <center>
+                <button type="button">Simulate</button>
+            </center>
+        </div>
+
+        <div class="item-c">
+            <center><h1>Log</h1></center>
+            <div class="flexcont">
+                <center>
+                    <textarea name="log" class="log"></textarea>
+                </center>
+            </div>
+            
+        </div>
+
+        <div class="item-d">
+            <center><h1>Footer</h1></center>
+        </div>
+    </div>
+
+</body>
+
+</html>

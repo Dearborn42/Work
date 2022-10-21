@@ -159,7 +159,7 @@ def simulation():
     _year = 0
     check = True
     while check:
-        time.sleep(.05)
+        time.sleep(1)
         _time[2] += 1
         print(_time)
         if _time[2] % 30 == 0:

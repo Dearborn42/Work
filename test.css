@@ -59,8 +59,8 @@ button{
 }
 textarea{
     resize:none;
-    /* width: auto;
-    height: auto; */
+    /* width: 20vw;
+    height: 100%; */
 }
 img{
     padding:5px;

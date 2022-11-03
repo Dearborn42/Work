@@ -1,0 +1,71 @@
+{
+    "students": {
+        "freshman": [],
+        "sophmore": [],
+        "junior": [],
+        "senior": []
+    },
+    "staff": {
+        "principal": [],
+        "vicePrincipal": [],
+        "counselor": [],
+        "officeWorker": [],
+        "security": [],
+        "maintenance": [],
+        "teacher": {
+            "math": [],
+            "science": [],
+            "english": [],
+            "history": [],
+            "electives": []
+        }
+    },
+    "studentsNumber": {
+        "total": 0,
+        "freshman": 0,
+        "sophmore": 0,
+        "junior": 1,
+        "senior": 0,
+        "teachers": 0
+    },
+    "clubs": {
+        "test": {
+            "supervisor": "",
+            "officers": "",
+            "members": "",
+            "numberOfMembers": ""
+        }
+    },
+    "assignmentNumber": {
+        "total": 0,
+        "freshman": 0,
+        "sophmore": 0,
+        "junior": 0,
+        "senior": 0
+    },
+    "yearNumber": 0,
+    "posTraits": {
+        "friendly": 1.1,
+        "honest": 1.2,
+        "open-minded": 1.5,
+        "athletic": 1.1,
+        "leadership": 1.5,
+        "funny": 1.1,
+        "hard-working": 1.9,
+        "motivated": 1.7,
+        "mature": 1.4,
+        "social": 1.2
+    },
+    "negTraits": {
+        "lazy": 0.8,
+        "irresponsible": 0.9,
+        "uninteresting": 1,
+        "bad-ego": 1,
+        "unfocused": 0.8,
+        "late": 0.9,
+        "dull": 1,
+        "childish": 0.9,
+        "agressive": 1,
+        "forgetful": 0.8
+    }
+}

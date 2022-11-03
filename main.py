@@ -1,20 +1,21 @@
 from asyncio.windows_events import NULL
-import random,names,json,time,math
+import random
+import names
+import json
+import time
+import math
 
 fileName = 'students.json'
+
 
 def createStudents(numStudents):
     global studentsNum
     """Function that creates students from numStudents"""
     for i in range(numStudents):
         # Chooses if student is going to be a male or female by random boolean value
-        genderBool = random.getrandbits(1)
-        if genderBool == True:
-            _studentFirstName = names.get_first_name(gender='male')
-            _studentGender = "male"
-        else:
-            _studentFirstName = names.get_first_name(gender='female')
-            _studentGender = "female"
+        gender = random.choice(["male", "female"])
+        _studentFirstName = names.get_first_name(gender=gender)
+        _studentGender = gender
         _studentLastName = names.get_last_name()
         _studentId = "10" + str(i)
 
@@ -55,9 +56,13 @@ def pointsLeaderboard():
     # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints, studentName]
     Leaderboard.sort(key=lambda x: x["totalScore"], reverse=True)
     for i in range(fileData["studentsNumber"]):
-        _Leaderboard.append([Leaderboard[i]['studentId'], Leaderboard[i]['totalScore'], Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
+        _Leaderboard.append([Leaderboard[i]['studentId'], Leaderboard[i]['totalScore'],
+                            Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
     return _Leaderboard
+
+
 pointsLeaderboard()
+
 
 def assignmentCreation(subject):
     """Function that creates a new assignment"""

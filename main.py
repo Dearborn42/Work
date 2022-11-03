@@ -1,5 +1,4 @@
 from asyncio.windows_events import NULL
-from operator import le
 import random
 import names
 import json
@@ -48,72 +47,21 @@ def createStudents(numStudents):
             json.dump(fileData, file, indent=4)
 
 
-leaderboard = [[NULL, NULL, NULL], [NULL, NULL, NULL], [
-    NULL, NULL, NULL], [NULL, NULL, NULL], [NULL, NULL, NULL]]
-
-
 def pointsLeaderboard():
     """Function that returns the top of the leaderboard"""
+    _Leaderboard = []
     with open(fileName, 'r') as file:
         fileData = json.load(file)
-        students = fileData["students"]
-    topStudent = 0
-    topSenior = 0
-    topJunior = 0
-    topSophmore = 0
-    topFreshman = 0
-
+    Leaderboard = fileData["students"]
+    # Sorts studentPoints from greatest to least then sorts the leaderboard by [studentId, studentPoints, studentName]
+    Leaderboard.sort(key=lambda x: x["totalScore"], reverse=True)
     for i in range(fileData["studentsNumber"]):
-        student = students[i]
-        if student["gradeLevel"] == 9:
-            if student["studentGrade"] > topFreshman:
-                topFreshman = student["studentGrade"]
-                leaderboard[1][0] = student['firstName']
-                leaderboard[1][1] = student['lastName']
-                leaderboard[1][2] = topFreshman
-
-        if student["gradeLevel"] == 10:
-            if student["studentGrade"] > topSophmore:
-                topSophmore = student["studentGrade"]
-                leaderboard[2][0] = student['firstName']
-                leaderboard[2][1] = student['lastName']
-                leaderboard[2][2] = topSophmore
-
-        if student["gradeLevel"] == 11:
-            if student["studentGrade"] > topJunior:
-                topJunior = student["studentGrade"]
-                leaderboard[3][0] = student['firstName']
-                leaderboard[3][1] = student['lastName']
-                leaderboard[3][2] = topJunior
-
-        if student["gradeLevel"] == 12:
-            if student["studentGrade"] > topSenior:
-                topSenior = student["studentGrade"]
-                leaderboard[4][0] = student['firstName']
-                leaderboard[4][1] = student['lastName']
-                leaderboard[4][2] = topSenior
-
-        if students[i]["studentGrade"] > topStudent:
-            topStudent = student["studentGrade"]
-            leaderboard[0][0] = student['firstName']
-            leaderboard[0][1] = student['lastName']
-            leaderboard[0][2] = topStudent
-    print(leaderboard)
+        _Leaderboard.append([Leaderboard[i]['studentId'], Leaderboard[i]['totalScore'],
+                            Leaderboard[i]['firstName'] + " " + Leaderboard[i]['lastName']])
+    return _Leaderboard
 
 
-def createEvent():
-    events = ['footballGame', 'basketballGame', 'soccerGame', 'tennisGame',
-              'volleyballGame', 'prom', 'fundraiser', 'bakingComp', 'clubsNight', 'fbla', 'rugbyGame', 'lacrossGame']
-    with open(fileName, 'r+') as file:
-        fileData = json.load(file)
-        students = fileData["students"]
-        for i in range(fileData["studentsNumber"]):
-            chance = random.randint(0, 1)
-            print(chance)
-            students[i]['totalPoints'] = students[i]['totalPoints'] + chance
-            file.seek(0)
-            file.truncate()
-            json.dump(fileData, file, indent=4)
+pointsLeaderboard()
 
 
 def assignmentCreation(subject):
@@ -141,9 +89,47 @@ def assignmentCreation(subject):
                 allScores.append(score)
                 students[i]["studentGrade"] = (
                     students[i]["studentGrade"] + score) / 2
+        totalScore = int(math.ceil(sum(allScores) / len(allScores)))
         file.seek(0)
         file.truncate()
         json.dump(fileData, file, indent=4)
+        return totalScore
+
+
+def studentEvents(event):
+    """Function that creates or lets students participate in events."""
+
+    # Still being worked on
+
+    sports = ["football", "soccer", "baseball", "volleyball,", "softball"]
+    nonsports = ["SpellingBee", "Fbla", "ChessTournament", "ChessTournament"]
+    possibleWinners = []
+    possibleStudentCouncil = []
+
+    with open(fileName, 'r+') as file:
+        fileData = json.load(file)
+        students = fileData["students"]
+        for i in range(len(students)):
+            student = fileData["students"][i]
+            # determines if student can attend the event
+            canAttend = bool(random.getrandbits(1))
+            if canAttend == True and student["personality"]["happiness"] >= 60:
+                # if student is in a sport event then the student will earn a point
+                if event in sports:
+                    student["totalPoints"] += 1
+                elif event in nonsports:
+                    if student["Intelligence"] >= 80:
+                        # if student is in a nonsports event then the student will have a chance to wil if their intellgence is higher or equal to 80, and will earn a point
+                        possibleWinners.append(student["studentId"])
+                        student["totalPoints"] += 1
+                elif event == "CouncilElections":
+                    if student["Intelligence"] >= 60 and student["studentGrade"] >= 70:
+                        # if student is in the student council election then they could win if their intelligence is higher than 60 and their grade is greater than or equal to 70, and the sutdent will earn a point
+                        possibleStudentCouncil.append(student["studentId"])
+                        student["totalPoints"] += 1
+                elif event == "CustomEvent":
+                    # if student is in any custom event then they earn a point
+                    student["totalPoints"] += 1
 
 
 def simulation():
@@ -163,14 +149,11 @@ def simulation():
             assignmentCreation(1)
             assignmentCreation(2)
             assignmentCreation(3)
+            studentEvents(sports[0])
         if _time[1] >= 5:
-            createEvent()
-            createEvent()
-            createEvent()
-            pointsLeaderboard()
             assignmentCreation(4)
-            _time[1] = 0
             _year = _year + 1
+            _time[1] = 0
             if _year == 4:
                 check = False
                 print("Year has ended")
@@ -178,7 +161,3 @@ def simulation():
             if _time[2] >= 60:
                 _time[2] = 0
                 _time[1] += 1
-
-
-# if __name__ == "__main__":
-#     simulation()

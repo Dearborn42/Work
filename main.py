@@ -68,8 +68,8 @@ def pointsLeaderboard():
         if students[i]["gradeLevel"] == 9:
             if students[i]["studentGrade"] > topFreshman:
                 topFreshman = students[i]["studentGrade"]
-                leaderboard[1][0] = students[i]['firstName']
-                leaderboard[1][1] = students[i]['lastName']
+                place = students[i]["firstName"] + \
+                    " " + students[i]["lastName"]
                 leaderboard[1][2] = topFreshman
         if students[i]["gradeLevel"] == 10:
             if students[i]["studentGrade"] > topSophmore:

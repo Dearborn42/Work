@@ -4,4 +4,38 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-
+div{
+    border: 1px solid black;
+}
+.flexbox{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+#title{
+    text-align: center;
+    font-size: 400%;
+    flex-grow: 4;
+}
+#students, #assignments, #events{
+    font-size: 150%;
+    text-align: center;
+}
+#log{
+    font-size: 300%;
+    text-align: center;
+}
+.creating{
+    flex-grow: 3;
+}
+.logs{
+    flex-grow: 4;
+}

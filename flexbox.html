@@ -15,6 +15,77 @@
     <title>Control Panel</title>
 </head>
 <body>
-    <div></div>
+    <script>
+        function clears(id){
+            document.getElementById(id).innerHTML="";
+        }
+    </script>
+    <div class="flexbox">
+        <div class="row">
+            <div>
+                <img src="west-mec copy.png" alt="logo">
+            </div>
+            <div id="title">
+                <h1>Control Panel</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="creating">
+                    <p id="students">Adding Students</p>
+                    <label for="num">Enter number of students:</label>
+                    <input type="text" id="num" name="student" required>
+                    <button onclick="clears(id)">Submit</button>
+                </div>
+                <div class="creating">
+                    <p id="assignments">Creating Assignments</p>
+                    <label for="type">Type of assignment:</label>
+                    <ul>
+                        <li>
+                            <input type="radio" id="math" name="type" required>
+                            <label for="math">Math</label>
+                            <button onclick="clears()">Submit</button>
+                        </li>
+                        <li>
+                            <input type="radio" id="english" name="type" required>
+                            <label for="english">English</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="science" name="type" required>
+                            <label for="science">Science</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="history" name="type" required>
+                            <label for="history">History</label>
+                        </li>
+                    </ul>
+                    <label for="name" class="assignment">Assignment Name:</label>
+                    <input type="text" id="name" name="type" required>
+                    <button type="submit">Submit</button>
+                </div>
+                <div class="creating">
+                    <p id="events">Creating Events</p>
+                    <label for="type">Type of event:</label>
+                    <ul>
+                        <li>
+                            <input type="radio" id="sport" name="type" required>
+                            <label for="sport">Sport</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="non-sport" name="type" required>
+                            <label for="non-sprt">Non-Sport</label>
+                        </li>
+                    </ul>
+                    <label for="name">Event Name:</label>
+                    <input type="text" id="name" name="type" required>
+                    <input type="button">
+                </div>
+            </div>
+            <div class="logs">
+                <h1 id="log">Log</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas, dicta consectetur optio vel aut nesciunt adipisci repudiandae? Eius ex ut vero ab error unde sequi aliquid? Esse, eum ipsam! Libero quaerat laborum voluptatibus odit nemo quasi ipsum, est, dolores quod at veniam autem soluta molestiae. Recusandae necessitatibus vero dolor!</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

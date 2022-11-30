@@ -1,10 +1,14 @@
-import names,random,json
+import json
+import random
+
+import names
 
 file = open('people.json')
 data = json.load(file)
 yearNum = data['yearNumber']
 posTraits = data['posTraits']
 negTraits = data['negTraits']
+
 
 def createStudents(numStudents):
     """Function that recieves a number of students to create students."""
@@ -20,7 +24,7 @@ def createStudents(numStudents):
             self.grades = {}
             self.personalityTraits = {}
             self.subjectSkills = {}
-        
+
         def createStudent(self, stuNum):
             """Function that gives a student attributes."""
             birthDay = random.randint(1, 30)
@@ -49,13 +53,14 @@ def createStudents(numStudents):
                 'electives': 100,
                 'overall': 100
             }
-            self.personalityTraits.update({random.choice(list(posTraits.items())),random.choice(list(negTraits.items()))})
+            self.personalityTraits.update(
+                {random.choice(list(posTraits.items())), random.choice(list(negTraits.items()))})
             self.subjectSkills = {
-                'math': random.randint(25,100),
-                'english': random.randint(30,100),
-                'science': random.randint(45,100),
-                'history': random.randint(20,100),
-                'electives': random.randint(50,100)
+                'math': random.randint(25, 100),
+                'english': random.randint(30, 100),
+                'science': random.randint(45, 100),
+                'history': random.randint(20, 100),
+                'electives': random.randint(50, 100)
             }
 
             with open('people.json', 'r+') as file:
@@ -65,11 +70,10 @@ def createStudents(numStudents):
                 fileData["studentsNumber"][grade] += 1
                 file.seek(0)
                 json.dump(fileData, file, indent=4)
-     
+
     for i in range(numStudents):
         student = Student()
         student.createStudent(stuNum=i)
 
-createStudents(1)
 
-   
+createStudents(1)

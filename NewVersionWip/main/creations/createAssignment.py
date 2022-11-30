@@ -1,6 +1,6 @@
-import random
 import json
 import math
+import random
 
 
 def assignmentCreation(assignmentName, subject, grade):

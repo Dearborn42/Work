@@ -1,4 +1,7 @@
-import names,random,json
+import json
+import random
+
+import names
 
 file = open("people.json")
 data = json.load(file)
@@ -15,6 +18,7 @@ schoolStaff = {
     "maintenance": 10
 }
 
+
 def createWorkers():
     """Function that creates school staff/administ."""
     with open("template.txt", "r") as file:
@@ -30,26 +34,27 @@ def createWorkers():
             self.birthday = []
             self.personalityTraits = []
             self.skill = 0
-        
+
         def createStaff(self, job):
             """Function that creates a new staff member."""
             birthDay = random.randint(1, 30)
             birthMonth = random.randint(1, 12)
-            birthYear = random.randint(1969+yearNum,1999+yearNum)
+            birthYear = random.randint(1969+yearNum, 1999+yearNum)
 
             self.gender = random.choice(["female", "male"])
             self.firstName = names.get_first_name(gender=self.gender)
             self.lastName = names.get_last_name()
             self.birthday = [birthYear, birthMonth, birthDay]
-            self.personalityTraits.update({random.choice(list(posTraits.items())),random.choice(list(negTraits.items()))})
-            self.skill = random.randint(0,100)
+            self.personalityTraits.update(
+                {random.choice(list(posTraits.items())), random.choice(list(negTraits.items()))})
+            self.skill = random.randint(0, 100)
 
             with open("people.json", "r+") as file:
                 fileData = json.load(file)
                 # check if job is in list
                 if job in ["math", "science", "english", "history"]:
                     fileData["staff"]["teacher"][job].append(self.__dict__)
-                else: 
+                else:
                     fileData["staff"][job].append(self.__dict__)
                 file.seek(0)
                 json.dump(fileData, file, indent=4)
@@ -81,7 +86,9 @@ def createWorkers():
     for i in range(5):
         staff.createStaff(job="electives")
 
-#temp
+# temp
+
+
 def reset():
     """Function that wipes json data"""
     # take all text from template.txt and put it into people.txt
@@ -89,7 +96,6 @@ def reset():
         template = file.read()
         with open("people.json", "w") as file:
             file.write(template)
-reset()
 
-    
-     
+
+reset()

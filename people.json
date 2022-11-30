@@ -4,15 +4,47 @@
         "sophmore": [],
         "junior": [
             {
-                "firstName": "Steven",
-                "lastName": "Johnson",
-                "gender": "male",
+                "firstName": "Deirdre",
+                "lastName": "Wilborn",
+                "gender": "female",
                 "studentId": "100",
-                "points": 0,
+                "points": 6,
                 "birthday": [
                     2005,
-                    5,
-                    22
+                    1,
+                    13
+                ],
+                "assignments": [],
+                "grades": {
+                    "math": 100,
+                    "english": 100,
+                    "science": 100,
+                    "history": 100,
+                    "electives": 100,
+                    "overall": 100
+                },
+                "personalityTraits": {
+                    "dull": 1,
+                    "social": 1.2
+                },
+                "subjectSkills": {
+                    "math": 97,
+                    "english": 100,
+                    "science": 87,
+                    "history": 100,
+                    "electives": 58
+                }
+            },
+            {
+                "firstName": "Stephen",
+                "lastName": "Lesh",
+                "gender": "male",
+                "studentId": "100",
+                "points": 6,
+                "birthday": [
+                    2005,
+                    10,
+                    5
                 ],
                 "assignments": [],
                 "grades": {
@@ -25,14 +57,14 @@
                 },
                 "personalityTraits": {
                     "athletic": 1.1,
-                    "dull": 1
+                    "childish": 0.9
                 },
                 "subjectSkills": {
-                    "math": 49,
-                    "english": 88,
-                    "science": 71,
-                    "history": 77,
-                    "electives": 60
+                    "math": 63,
+                    "english": 63,
+                    "science": 54,
+                    "history": 71,
+                    "electives": 86
                 }
             }
         ],

@@ -19,6 +19,7 @@ div{
 .column{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 #title{
     text-align: center;
@@ -33,9 +34,9 @@ div{
     font-size: 300%;
     text-align: center;
 }
-.creating{
-    flex-grow: 3;
-}
 .logs{
-    flex-grow: 4;
+    flex-grow: 1;
+}
+.creating{
+    text-align: center;
 }

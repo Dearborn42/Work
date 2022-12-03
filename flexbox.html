@@ -17,7 +17,8 @@
 <body>
     <script>
         function clears(id){
-            document.getElementById(id).innerHTML="";
+            let content = document.getElementById(id).value;
+            document.getElementById(id).value="";
         }
     </script>
     <div class="flexbox">
@@ -34,35 +35,35 @@
                 <div class="creating">
                     <p id="students">Adding Students</p>
                     <label for="num">Enter number of students:</label>
-                    <input type="text" id="num" name="student" required>
+                    <input type="text" id="num" name="student"  value="">
                     <br>
-                    <button onclick="clears(id)">Submit</button>
+                    <button onclick="clears('num')">Submit</button>
                 </div>
                 <div class="creating">
                     <p id="assignments">Creating Assignments</p>
                     <label for="type">Type of assignment:</label>
                     <ul>
                         <li>
-                            <input type="radio" id="math" name="type" required>
+                            <input type="radio" id="math" name="type" >
                             <label for="math">Math</label>
                         </li>
                         <li>
-                            <input type="radio" id="english" name="type" required>
+                            <input type="radio" id="english" name="type" >
                             <label for="english">English</label>
                         </li>
                         <li>
-                            <input type="radio" id="science" name="type" required>
+                            <input type="radio" id="science" name="type" >
                             <label for="science">Science</label>
                         </li>
                         <li>
-                            <input type="radio" id="history" name="type" required>
+                            <input type="radio" id="history" name="type" >
                             <label for="history">History</label>
                         </li>
                     </ul>
                     <label for="name" class="assignment">Assignment Name:</label>
-                    <input type="text" id="name" name="type" required>
+                    <input type="text" id="name" name="type" value="">
                     <br>
-                    <button onclick="clears(id)">Submit</button>
+                    <button onclick="clears('name')">Submit</button>
                     <!-- <button type="submit">Submit</button> -->
                 </div>
                 <div class="creating">
@@ -70,18 +71,18 @@
                     <label for="type">Type of event:</label>
                     <ul>
                         <li>
-                            <input type="radio" id="sport" name="type" required>
+                            <input type="radio" id="sport" name="type" >
                             <label for="sport">Sport</label>
                         </li>
                         <li>
-                            <input type="radio" id="non-sport" name="type" required>
+                            <input type="radio" id="non-sport" name="type" >
                             <label for="non-sprt">Non-Sport</label>
                         </li>
                     </ul>
                     <label for="name">Event Name:</label>
-                    <input type="text" id="name" name="type" required>
+                    <input type="text" id="eName" name="type"  value="">
                     <br>
-                    <button onclick="clears(id)">Submit</button>
+                    <button onclick="clears('eName')">Submit</button>
                 </div>
             </div>
             <div class="logs">

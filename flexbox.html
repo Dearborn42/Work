@@ -22,8 +22,8 @@
     </script>
     <div class="flexbox">
         <div class="row">
-            <div>
-                <img src="west-mec copy.png" alt="logo">
+            <div id="logoCont">
+                <img src="west-mec copy.png" alt="logo" id="logo">
             </div>
             <div id="title">
                 <h1>Control Panel</h1>
@@ -61,6 +61,8 @@
                     </ul>
                     <label for="name" class="assignment">Assignment Name:</label>
                     <input type="text" id="name" name="type" required>
+                    <br>
+                    <button onclick="clears(id)">Submit</button>
                     <!-- <button type="submit">Submit</button> -->
                 </div>
                 <div class="creating">
@@ -78,12 +80,38 @@
                     </ul>
                     <label for="name">Event Name:</label>
                     <input type="text" id="name" name="type" required>
-                    <input type="button">
+                    <br>
+                    <button onclick="clears(id)">Submit</button>
                 </div>
             </div>
             <div class="logs">
-                <h1 id="log">Log</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas, dicta consectetur optio vel aut nesciunt adipisci repudiandae? Eius ex ut vero ab error unde sequi aliquid? Esse, eum ipsam! Libero quaerat laborum voluptatibus odit nemo quasi ipsum, est, dolores quod at veniam autem soluta molestiae. Recusandae necessitatibus vero dolor!</p>
+                <h1 class="titleText">Log</h1>
+                <textarea name="log" id="log" readonly></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sim">
+                <h1 class="titleText">Simulate</h1>
+                <button id="simButton">Simulate</button>
+            </div>
+            <div class="footer">
+                <div>
+                    <p class="footTitle">Contact Info</p>
+                    <p class="text">Phone #: 607-590-4040</p>
+                    <p class="text">Email: staff@east-mec.org</p>
+                </div>
+                <div>
+                    <p class="footTitle">Business Hours</p>
+                    <p class="text">Months: January-December</p>
+                    <p class="text">Days: Monday-Friday</p>
+                    <p class="text">Hours: 7:00 am - 6:00 pm</p>
+                </div>
+                <div>
+                    <p class="footTitle">Team</p>
+                    <p class="text">Andrew Murphy</p>
+                    <p class="text">Jacob Rigney</p>
+                    <p class="text">Noah Santos</p>
+                </div>
             </div>
         </div>
     </div>

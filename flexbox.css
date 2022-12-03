@@ -5,11 +5,21 @@ body {
     background-size: cover;
 }
 div{
+    margin: 1px;
+}
+#logo{
+    width: 50%;
+    height: auto;
+}
+#logoCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid black;
 }
 .flexbox{
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     flex-direction: column;
 }
 .row{
@@ -19,24 +29,73 @@ div{
 .column{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%; 
 }
 #title{
+    flex-grow: 2;
     text-align: center;
     font-size: 400%;
-    flex-grow: 4;
+    border: 1px solid black;
+    
 }
 #students, #assignments, #events{
     font-size: 150%;
     text-align: center;
 }
-#log{
+.titleText{
+    /* display: flex; */
     font-size: 300%;
     text-align: center;
 }
 .logs{
-    flex-grow: 1;
+    /* display: flex; */
+    flex-grow: 4;
+    /* align-self: stretch; */
+    text-align: center;
+    /* justify-self: stretch; */
+    border: 1px solid black;
 }
 .creating{
     text-align: center;
+    border: 1px solid black;
+    /* flex-grow: 2; */
+}
+#log{
+    resize: none;
+    width: 95%;
+    height: 80%;
+    overflow: scroll;
+}
+.sim{
+    /* display: flex; */
+    flex-direction: row;
+    flex-grow: 2;
+    text-align: center;
+    border: 1px solid black;
+}
+#simButton{
+    font-size: 150%;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 3;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 150%;
+    border: 1px solid black;
+}
+.footTitle{
+    text-decoration: underline;
+    font-weight: bold;
+}
+button{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 10%;
+    /* background-color: black;
+    color: white; */
+    background-color: white;
+    color: black;
 }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Noah Santos">
+    <meta name="description" content="Testing code from notes">
+    <meta property="og:image" content="URL to image">
+    <meta property="og:description" content="allows people to add students, events, and assignments">
+    <meta property="og:title" content="Control">
+    <meta charset="ISO-8859-1">
+    <link rel="icon" href="./west-mec favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./flexbox.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+</head>
+<body>
+    <script>
+        function clears(id){
+            let content = document.getElementById(id).value;
+            document.getElementById(id).value="";
+        }
+    </script>
+    <div class="flexbox">
+        <div class="row">
+            <div id="logoCont">
+                <img src="west-mec copy.png" alt="logo" id="logo">
+            </div>
+            <div id="title">
+                <h1>Control Panel</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="creating">
+                    <p id="students">Adding Students</p>
+                    <label for="num">Enter number of students:</label>
+                    <input type="text" id="num" name="student"  value="">
+                    <br>
+                    <button onclick="clears('num')">Submit</button>
+                </div>
+                <div class="creating">
+                    <p id="assignments">Creating Assignments</p>
+                    <label for="type">Type of assignment:</label>
+                    <ul>
+                        <li>
+                            <input type="radio" id="math" name="type" >
+                            <label for="math">Math</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="english" name="type" >
+                            <label for="english">English</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="science" name="type" >
+                            <label for="science">Science</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="history" name="type" >
+                            <label for="history">History</label>
+                        </li>
+                    </ul>
+                    <label for="name" class="assignment">Assignment Name:</label>
+                    <input type="text" id="name" name="type" value="">
+                    <br>
+                    <button onclick="clears('name')">Submit</button>
+                    <!-- <button type="submit">Submit</button> -->
+                </div>
+                <div class="creating">
+                    <p id="events">Creating Events</p>
+                    <label for="type">Type of event:</label>
+                    <ul>
+                        <li>
+                            <input type="radio" id="sport" name="type" >
+                            <label for="sport">Sport</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="non-sport" name="type" >
+                            <label for="non-sprt">Non-Sport</label>
+                        </li>
+                    </ul>
+                    <label for="name">Event Name:</label>
+                    <input type="text" id="eName" name="type"  value="">
+                    <br>
+                    <button onclick="clears('eName')">Submit</button>
+                </div>
+            </div>
+            <div class="logs">
+                <h1 class="titleText">Log</h1>
+                <textarea name="log" id="log" readonly></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sim">
+                <h1 class="titleText">Simulate</h1>
+                <button id="simButton">Simulate</button>
+            </div>
+            <div class="footer">
+                <div>
+                    <p class="footTitle">Contact Info</p>
+                    <p class="text">Phone #: 607-590-4040</p>
+                    <p class="text">Email: staff@east-mec.org</p>
+                </div>
+                <div>
+                    <p class="footTitle">Business Hours</p>
+                    <p class="text">Months: January-December</p>
+                    <p class="text">Days: Monday-Friday</p>
+                    <p class="text">Hours: 7:00 am - 6:00 pm</p>
+                </div>
+                <div>
+                    <p class="footTitle">Team</p>
+                    <p class="text">Andrew Murphy</p>
+                    <p class="text">Jacob Rigney</p>
+                    <p class="text">Noah Santos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

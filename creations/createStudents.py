@@ -1,6 +1,7 @@
+# Finished
+
 import json
 import random
-
 import names
 
 file = open('people.json')
@@ -25,11 +26,11 @@ def createStudents(numStudents):
             self.personalityTraits = {}
             self.subjectSkills = {}
 
-        def createStudent(self, stuNum):
+        def createStudent(self):
             """Function that gives a student attributes."""
-            birthDay = random.randint(1, 30)
-            birthMonth = random.randint(1, 12)
-            birthYear = random.randint(2004 + yearNum, 2007 + yearNum)
+            birthDay = str(random.randint(1, 30))
+            birthMonth = str(random.randint(1, 12))
+            birthYear = str(random.randint(2004 + yearNum, 2007 + yearNum))
 
             if birthYear == 2007 + yearNum:
                 grade = 'freshman'
@@ -44,7 +45,7 @@ def createStudents(numStudents):
             self.firstName = names.get_first_name(gender=self.gender)
             self.lastName = names.get_last_name()
             self.birthday = [birthYear, birthMonth, birthDay]
-            self.studentId = "10" + str(stuNum)
+            self.studentId = "10" + str(birthDay + birthYear + birthMonth)
             self.grades = {
                 'math': 100,
                 'english': 100,
@@ -73,7 +74,6 @@ def createStudents(numStudents):
 
     for i in range(numStudents):
         student = Student()
-        student.createStudent(stuNum=i)
+        student.createStudent()
 
-
-createStudents(1)
+createStudents(4)

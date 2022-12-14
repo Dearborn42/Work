@@ -1,13 +1,14 @@
+# Finished
+
 import json
 import random
-
 import names
 
-file = open("people.json")
+file = open('people.json')
 data = json.load(file)
-yearNum = data["yearNumber"]
-posTraits = data["posTraits"]
-negTraits = data["negTraits"]
+yearNum = data['yearNumber']
+posTraits = data['posTraits']
+negTraits = data['negTraits']
 
 schoolStaff = {
     "principal": 1,
@@ -15,7 +16,11 @@ schoolStaff = {
     "counselor": 4,
     "officeWorker": 6,
     "security": 4,
-    "maintenance": 10
+    "maintenance": 10,
+    "math": 5,
+    "science": 5,
+    "english": 5,
+    "history": 5
 }
 
 
@@ -32,7 +37,7 @@ def createWorkers():
             self.lastName = ""
             self.gender = ""
             self.birthday = []
-            self.personalityTraits = []
+            self.personalityTraits = {}
             self.skill = 0
 
         def createStaff(self, job):
@@ -45,8 +50,8 @@ def createWorkers():
             self.firstName = names.get_first_name(gender=self.gender)
             self.lastName = names.get_last_name()
             self.birthday = [birthYear, birthMonth, birthDay]
-            self.personalityTraits.update(
-                {random.choice(list(posTraits.items())), random.choice(list(negTraits.items()))})
+            self.personalityTraits = {}
+            self.personalityTraits.update({random.choice(list(posTraits.items())), random.choice(list(negTraits.items()))})
             self.skill = random.randint(0, 100)
 
             with open("people.json", "r+") as file:
@@ -59,43 +64,11 @@ def createWorkers():
                 file.seek(0)
                 json.dump(fileData, file, indent=4)
 
-    # Too lazy rn to make the following below more efficiency
-
+    # Genorate staff
     staff = staff()
-    # Normal staff
-    staff.createStaff(job="principal")
-    staff.createStaff(job="vicePrincipal")
-    for i in range(schoolStaff["counselor"]):
-        staff.createStaff(job="counselor")
-    for i in range(schoolStaff["officeWorker"]):
-        staff.createStaff(job="officeWorker")
-    for i in range(schoolStaff["security"]):
-        staff.createStaff(job="security")
-    for i in range(schoolStaff["maintenance"]):
-        staff.createStaff(job="maintenance")
+    allStaff = ["principal", "vicePrincipal", "counselor", "officeWorker", "security", "maintenance", "math", "science", "english", "history"]
+    for i in allStaff:
+        for j in range(schoolStaff[i]):
+            staff.createStaff(job=i)
 
-    # Teaching staff
-    for i in range(5):
-        staff.createStaff(job="math")
-    for i in range(5):
-        staff.createStaff(job="science")
-    for i in range(5):
-        staff.createStaff(job="english")
-    for i in range(5):
-        staff.createStaff(job="history")
-    for i in range(5):
-        staff.createStaff(job="electives")
-
-# temp
-
-
-def reset():
-    """Function that wipes json data"""
-    # take all text from template.txt and put it into people.txt
-    with open("template.txt", "r") as file:
-        template = file.read()
-        with open("people.json", "w") as file:
-            file.write(template)
-
-
-reset()
+createWorkers()

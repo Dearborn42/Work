@@ -9,7 +9,7 @@
     <meta property="og:title" content="Title">
     <meta charset="ISO-8859-1">
     <link rel="icon" href="./west-mec favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="./style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control Panel</title>
@@ -28,7 +28,7 @@
         <!-- image -->
         <div class="item-e">
             <center>
-                <img src="/web/images/copy.png" alt="tiger mascot">
+                <img src="/west-mec.png" alt>
             </center>
         </div>
 
@@ -42,8 +42,8 @@
                 <fieldset>
                     <legend>Add Students</legend>
                     <label for="num">Enter number of students:</label>
-                    <input type="text" id="num" name="student" required>
-                    <button type="submit">Submit</button>
+                    <input type="text" id="studentNum" name="student" required>
+                    <button type="submit" id="addStudents">Submit</button>
                 </fieldset>
             </form>
             <!-- creating assignments form -->
@@ -70,8 +70,8 @@
                         </li>
                     </ul>
                     <label for="name" class="assignment">Assignment Name:</label>
-                    <input type="text" id="name" name="type" required>
-                    <button type="submit">Submit</button>
+                    <input type="text" id="assignmentName" name="type" required>
+                    <button type="submit" id="addAssignments">Submit</button>
                 </fieldset>
             </form>
             <!-- creating events form -->
@@ -90,8 +90,8 @@
                         </li>
                     </ul>
                     <label for="name">Event Name:</label>
-                    <input type="text" id="name" name="type" required>
-                    <button type="submit">Submit</button>
+                    <input type="text" id="eventName" name="type" required>
+                    <button type="submit" id="addEvents">Submit</button>
                 </fieldset>
             </form>
         </div>
@@ -102,7 +102,7 @@
                 <h1>Simulate</h1>
             </center>
             <center>
-                <button type="button" class="sim">Simulate</button>
+                <button type="button" id="sim">Simulate</button>
             </center>
         </div>
 
@@ -146,6 +146,8 @@
             © 2022 East-Mec
         </div>
     </div>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="/web/script.js"></script>
 
 </body>
 

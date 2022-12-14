@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="author" content="Noah Santos">
     <meta name="description" content="Testing code from notes">
@@ -14,17 +15,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control Panel</title>
 </head>
+
 <body>
     <script>
-        function clears(id){
+        function clears(id) {
             let content = document.getElementById(id).value;
-            document.getElementById(id).value="";
+            document.getElementById(id).value = "";
         }
     </script>
     <div class="flexbox">
         <div class="row">
             <div id="logoCont">
-                <img src="west-mec copy.png" alt="logo" id="logo">
+                <img src="/web/images/west-mec copy.png" alt="logo" id="logo">
             </div>
             <div id="title">
                 <h1>Control Panel</h1>
@@ -35,7 +37,7 @@
                 <div class="creating">
                     <p id="students">Adding Students</p>
                     <label for="num">Enter number of students:</label>
-                    <input type="text" id="num" name="student"  value="">
+                    <input type="text" id="num" name="student" value="">
                     <br>
                     <button onclick="clears('num')">Submit</button>
                 </div>
@@ -44,19 +46,19 @@
                     <label for="type">Type of assignment:</label>
                     <ul>
                         <li>
-                            <input type="radio" id="math" name="type" >
+                            <input type="radio" id="math" name="type">
                             <label for="math">Math</label>
                         </li>
                         <li>
-                            <input type="radio" id="english" name="type" >
+                            <input type="radio" id="english" name="type">
                             <label for="english">English</label>
                         </li>
                         <li>
-                            <input type="radio" id="science" name="type" >
+                            <input type="radio" id="science" name="type">
                             <label for="science">Science</label>
                         </li>
                         <li>
-                            <input type="radio" id="history" name="type" >
+                            <input type="radio" id="history" name="type">
                             <label for="history">History</label>
                         </li>
                     </ul>
@@ -71,16 +73,16 @@
                     <label for="type">Type of event:</label>
                     <ul>
                         <li>
-                            <input type="radio" id="sport" name="type" >
+                            <input type="radio" id="sport" name="type">
                             <label for="sport">Sport</label>
                         </li>
                         <li>
-                            <input type="radio" id="non-sport" name="type" >
+                            <input type="radio" id="non-sport" name="type">
                             <label for="non-sprt">Non-Sport</label>
                         </li>
                     </ul>
                     <label for="name">Event Name:</label>
-                    <input type="text" id="eName" name="type"  value="">
+                    <input type="text" id="eName" name="type" value="">
                     <br>
                     <button onclick="clears('eName')">Submit</button>
                 </div>
@@ -117,4 +119,5 @@
         </div>
     </div>
 </body>
+
 </html>

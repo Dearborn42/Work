@@ -27,4 +27,4 @@ def createEvent(eventName, grade):
         json.dump(fileData, file, indent=4)
 
 
-createEvent("Basketball", "junior")
+createEvent("Basketball", "senior")

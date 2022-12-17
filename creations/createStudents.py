@@ -2,6 +2,7 @@
 
 import json
 import random
+
 import names
 
 file = open('people.json')
@@ -75,5 +76,6 @@ def createStudents(numStudents):
     for i in range(numStudents):
         student = Student()
         student.createStudent()
+
 
 createStudents(4)

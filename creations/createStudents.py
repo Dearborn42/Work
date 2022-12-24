@@ -2,7 +2,7 @@
 
 import json
 import random
-
+import sys
 import names
 
 file = open('people.json')
@@ -78,4 +78,5 @@ def createStudents(numStudents):
         student.createStudent()
 
 
-createStudents(4)
+print(int(sys.argv[1]))
+createStudents(int(sys.argv[1]))

@@ -78,5 +78,4 @@ def createStudents(numStudents):
         student.createStudent()
 
 
-print(int(sys.argv[1]))
 createStudents(int(sys.argv[1]))

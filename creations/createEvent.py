@@ -1,6 +1,5 @@
 import json
-import math
-import random
+import sys
 
 
 def createEvent(eventName, grade):
@@ -27,4 +26,4 @@ def createEvent(eventName, grade):
         json.dump(fileData, file, indent=4)
 
 
-createEvent("Basketball", "senior")
+createEvent(sys.argv[1], sys.argv[2])

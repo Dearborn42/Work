@@ -3,6 +3,7 @@
 import json
 import math
 import random
+import sys
 
 def assignmentCreation(assignmentName, subject, grade):
     """Function that creates a new assignment"""
@@ -35,4 +36,4 @@ def assignmentCreation(assignmentName, subject, grade):
         file.truncate()
         json.dump(fileData, file, indent=4)
 
-assignmentCreation("coolAssignment", "math", "junior")
+assignmentCreation(sys.argv[1], sys.argv[2], sys.argv[3])

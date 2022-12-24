@@ -6,4 +6,4 @@ const { spawn } = require('child_process');
 
 // const createAssignments = spawn('python', ['./creations/createAssignment.py', "Assignment name", "subject", "grade"])
 // const createEvents = spawn('python', ['./creations/createEvent.py', "sport", "grade"]);
-// const createStudents = spawn('python', ['./creations/createStudents.py', (num of students)]);
+const createStudents = spawn('python', ['./creations/createStudents.py',4]);

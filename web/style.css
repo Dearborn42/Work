@@ -60,6 +60,9 @@ div{
     border: 1px solid black;
     /* flex-grow: 2; */
 }
+.grade{
+    border: 1px solid black;
+}
 #log{
     resize: none;
     width: 95%;

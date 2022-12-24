@@ -63,9 +63,14 @@
                         </li>
                     </ul>
                     <label for="name" class="assignment">Assignment Name:</label>
-                    <input type="text" id="name" name="type" value="">
                     <br>
-                    <button onclick="clears('name')">Submit</button>
+                    <input type="text" class="grade" id="name" name="type" value="">
+                    <br>
+                    <label for="name" class="assignment">Grade level:</label>
+                    <br>
+                    <input type="text" class="grade" id="grades" name="type" value="">
+                    <br>
+                    <button onclick="clears('name'); clears('grades');">Submit</button>
                     <!-- <button type="submit">Submit</button> -->
                 </div>
                 <div class="creating">

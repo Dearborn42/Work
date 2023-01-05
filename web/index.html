@@ -41,31 +41,31 @@
                     <label for="type">Type of assignment:</label>
                     <ul>
                         <li>
-                            <input type="radio" id="math" name="type">
+                            <input type="radio" value="math" name="type">
                             <label for="math">Math</label>
                         </li>
                         <li>
-                            <input type="radio" id="english" name="type">
+                            <input type="radio" value="english" name="type">
                             <label for="english">English</label>
                         </li>
                         <li>
-                            <input type="radio" id="science" name="type">
+                            <input type="radio" value="science" name="type">
                             <label for="science">Science</label>
                         </li>
                         <li>
-                            <input type="radio" id="history" name="type">
+                            <input type="radio" value="history" name="type">
                             <label for="history">History</label>
                         </li>
                     </ul>
                     <label for="name" class="assignment">Assignment Name:</label>
                     <br>
-                    <input type="text" class="grade" id="name" name="type" value="">
+                    <input type="text" class="grade" id="name" name="t" value="">
                     <br>
-                    <label for="name" class="assignment">Grade level:</label>
+                    <label for="name" class="assignment">Grade level: "freshman, sophmore, etc."</label>
                     <br>
-                    <input type="text" class="grade" id="grades" name="type" value="">
+                    <input type="text" class="grade" id="grades" name="t" value="">
                     <br>
-                    <button onclick="eel.assignmentCreation(document.getElementById('name').value,document.getElementById('grades').value)">Submit</button>
+                    <button onclick="assignmentCreation(document.getElementById('name').value,document.getElementById('grades').value)">Submit</button>
                     <!-- <button type="submit">Submit</button> -->
                 </div>
                 <div class="creating">
@@ -73,33 +73,35 @@
                     <label for="type">Type of event:</label>
                     <ul>
                         <li>
-                            <input type="radio" id="sport" name="type">
+                            <input type="radio" id="sport" name="etype">
                             <label for="sport">Sport</label>
                         </li>
                         <li>
-                            <input type="radio" id="non-sport" name="type">
+                            <input type="radio" id="non-sport" name="etype">
                             <label for="non-sprt">Non-Sport</label>
                         </li>
                     </ul>
-                    <label for="name">Event Name:</label>
-                    <input type="text" id="eName" name="type" value="">
+                    <label for="name">Event Name:</label><br>
+                    <input type="text" id="eName" name="etype"><br>
+                    <label for="name">Grade level: "freshman, sophmore, etc."</label><br>
+                    <input type="text" id="eGrade" name="etype">
                     <br>
-                    <button onclick="eel.createEvent(document.getElementById('eName').value)">Submit</button>
+                    <button onclick="createEvent(document.getElementById('eGrade').value,document.getElementById('eName').value)">Submit</button>
                 </div>
             </div>
             <div class="logs">
-                <h1 class="titleText">Log</h1>
+                <h1 class="titleText">Logs</h1>
                 <textarea name="log" id="log" readonly></textarea>
             </div>
         </div>
         <div class="row">
             <div class="sim">
                 <h1 class="titleText">Display Students</h1>
-                <button id="simButton">Submit</button>
+                <button id="simButton" onclick="log('test')">Submit</button>
             </div>
             <div class="reset">
                 <h1 class="titleText">End the Year</h1>
-                <button id="simButton ">Submit</button>
+                <button id="simButton" onclick="reset()">Submit</button>
             </div>
             <div class="footer">
                 <div>

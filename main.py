@@ -2,14 +2,19 @@ import json
 import random
 import names
 import eel
+
 eel.init('web')
 
+# Open and load people.json file
 file = open('people.json')
 data = json.load(file)
+
+# Assign variables for yearNumber, posTraits, and negTraits from data
 yearNum = data['yearNumber']
 posTraits = data['posTraits']
 negTraits = data['negTraits']
 
+# Define dictionary of school staff positions and the number of staff for each position
 schoolStaff = {
     "principal": 1,
     "vicePrincipal": 1,
@@ -24,8 +29,7 @@ schoolStaff = {
 }
 
 def resetJson():
-    """Function that wipes json data"""
-    # take all text from template.txt and put it into people.txt
+    """Function that wipes json data by replacing it with the contents of template.txt"""
     with open("template.txt", "r") as file:
         template = file.read()
         with open("people.json", "w") as file:
@@ -34,11 +38,11 @@ def resetJson():
 @eel.expose
 def createWorkers():
     """
-    Function that creates school staff/administ and removes old ones.
-    - Input: N/A
-    - Output: Adds/removes staff to json 
+    Function that creates school staff/administrators and removes old ones.
+    - Input: None
+    - Output: Adds/removes staff to people.json 
     """
-    class staff:
+    class Staff:
         def __init__(self):
             self.firstName = ""
             self.lastName = ""
@@ -61,9 +65,10 @@ def createWorkers():
             self.personalityTraits.update({random.choice(list(posTraits.items())), random.choice(list(negTraits.items()))})
             self.skill = random.randint(0, 100)
 
+            # Open and update people.json
             with open("people.json", "r+") as file:
                 fileData = json.load(file)
-                # check if job is in list
+                # Check if job is in list of teacher positions
                 if job in ["math", "science", "english", "history"]:
                     fileData["staff"]["teacher"][job].append(self.__dict__)
                 else:
@@ -71,9 +76,9 @@ def createWorkers():
                 file.seek(0)
                 json.dump(fileData, file, indent=4)
 
-    # Genorate staff
+    # Generate staff
     resetJson()
-    staff = staff()
+    staff = Staff()
     allStaff = ["principal", "vicePrincipal", "counselor", "officeWorker", "security", "maintenance", "math", "science", "english", "history"]
     for i in allStaff:
         for j in range(schoolStaff[i]):
@@ -150,7 +155,7 @@ def createStudents(numStudents):
         student.createStudent()
 
 @eel.expose
-def createEvent(eventName, grade):
+def createEvent(grade):
     """
     Function that creates a new event.
     - Input: The name of the event and grade
@@ -211,5 +216,7 @@ def assignmentCreation(assignmentName, subject, grade):
         file.seek(0)
         file.truncate()
         json.dump(fileData, file, indent=4)
+
+createEvent("freshman")
 
 eel.start('index.html')

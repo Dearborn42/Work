@@ -2,15 +2,145 @@
     "students": {
         "freshman": [
             {
-                "firstName": "Savannah",
-                "lastName": "Johnson",
+                "firstName": "Carol",
+                "lastName": "Nelson",
                 "gender": "female",
-                "studentId": "1030200711",
-                "points": 0,
+                "studentId": "101820073",
+                "points": 2,
                 "birthday": [
                     "2007",
-                    "11",
-                    "30"
+                    "3",
+                    "18"
+                ],
+                "assignments": [],
+                "grades": {
+                    "math": 95.8359375,
+                    "english": 100,
+                    "science": 100,
+                    "history": 100,
+                    "electives": 100,
+                    "overall": 98.134375
+                },
+                "personalityTraits": {
+                    "dull": 1,
+                    "open-minded": 1.5
+                },
+                "subjectSkills": {
+                    "math": 64,
+                    "english": 71,
+                    "science": 60,
+                    "history": 23,
+                    "electives": 62
+                }
+            },
+            {
+                "firstName": "Carrie",
+                "lastName": "Moore",
+                "gender": "female",
+                "studentId": "102820074",
+                "points": 2,
+                "birthday": [
+                    "2007",
+                    "4",
+                    "28"
+                ],
+                "assignments": [],
+                "grades": {
+                    "math": 90.8125,
+                    "english": 100,
+                    "science": 100,
+                    "history": 100,
+                    "electives": 100,
+                    "overall": 98.325
+                },
+                "personalityTraits": {
+                    "leadership": 1.5,
+                    "unfocused": 0.8
+                },
+                "subjectSkills": {
+                    "math": 81,
+                    "english": 97,
+                    "science": 49,
+                    "history": 60,
+                    "electives": 67
+                }
+            },
+            {
+                "firstName": "Ivette",
+                "lastName": "Rivera",
+                "gender": "female",
+                "studentId": "101520076",
+                "points": 2,
+                "birthday": [
+                    "2007",
+                    "6",
+                    "15"
+                ],
+                "assignments": [],
+                "grades": {
+                    "math": 65.8515625,
+                    "english": 100,
+                    "science": 100,
+                    "history": 100,
+                    "electives": 100,
+                    "overall": 93.540625
+                },
+                "personalityTraits": {
+                    "unfocused": 0.8,
+                    "hard-working": 1.9
+                },
+                "subjectSkills": {
+                    "math": 43,
+                    "english": 41,
+                    "science": 85,
+                    "history": 52,
+                    "electives": 56
+                }
+            },
+            {
+                "firstName": "Steven",
+                "lastName": "Thomas",
+                "gender": "male",
+                "studentId": "102420071",
+                "points": 2,
+                "birthday": [
+                    "2007",
+                    "1",
+                    "24"
+                ],
+                "assignments": [],
+                "grades": {
+                    "math": 99.6640625,
+                    "english": 100,
+                    "science": 100,
+                    "history": 100,
+                    "electives": 100,
+                    "overall": 100.065625
+                },
+                "personalityTraits": {
+                    "lazy": 0.8,
+                    "funny": 1.1
+                },
+                "subjectSkills": {
+                    "math": 99,
+                    "english": 30,
+                    "science": 83,
+                    "history": 27,
+                    "electives": 55
+                }
+            }
+        ],
+        "sophmore": [
+            {
+                "firstName": "Allen",
+                "lastName": "Mullen",
+                "gender": "male",
+                "studentId": "101120067",
+                "points": 0,
+                "birthday": [
+                    "2006",
+                    "7",
+                    "11"
                 ],
                 "assignments": [],
                 "grades": {
@@ -22,26 +152,26 @@
                     "overall": 100
                 },
                 "personalityTraits": {
-                    "funny": 1.1,
-                    "lazy": 0.8
+                    "forgetful": 0.8,
+                    "motivated": 1.7
                 },
                 "subjectSkills": {
-                    "math": 89,
-                    "english": 70,
-                    "science": 55,
-                    "history": 83,
-                    "electives": 60
+                    "math": 35,
+                    "english": 80,
+                    "science": 97,
+                    "history": 85,
+                    "electives": 63
                 }
             },
             {
-                "firstName": "Gregory",
-                "lastName": "Gibbs",
-                "gender": "male",
-                "studentId": "101720079",
+                "firstName": "Sallie",
+                "lastName": "Osborn",
+                "gender": "female",
+                "studentId": "101720068",
                 "points": 0,
                 "birthday": [
-                    "2007",
-                    "9",
+                    "2006",
+                    "8",
                     "17"
                 ],
                 "assignments": [],
@@ -54,63 +184,29 @@
                     "overall": 100
                 },
                 "personalityTraits": {
-                    "forgetful": 0.8,
-                    "friendly": 1.1
+                    "bad-ego": 1,
+                    "mature": 1.4
                 },
                 "subjectSkills": {
-                    "math": 63,
-                    "english": 41,
-                    "science": 54,
-                    "history": 87,
-                    "electives": 59
-                }
-            }
-        ],
-        "sophmore": [
-            {
-                "firstName": "Merlin",
-                "lastName": "Merchant",
-                "gender": "male",
-                "studentId": "10520067",
-                "points": 0,
-                "birthday": [
-                    "2006",
-                    "7",
-                    "5"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "honest": 1.2,
-                    "late": 0.9
-                },
-                "subjectSkills": {
-                    "math": 92,
-                    "english": 60,
-                    "science": 90,
-                    "history": 81,
-                    "electives": 52
+                    "math": 45,
+                    "english": 42,
+                    "science": 75,
+                    "history": 30,
+                    "electives": 76
                 }
             }
         ],
         "junior": [
             {
-                "firstName": "Barbara",
-                "lastName": "Lusby",
+                "firstName": "Erin",
+                "lastName": "Fairchild",
                 "gender": "female",
-                "studentId": "102420055",
+                "studentId": "102320051",
                 "points": 0,
                 "birthday": [
                     "2005",
-                    "5",
-                    "24"
+                    "1",
+                    "23"
                 ],
                 "assignments": [],
                 "grades": {
@@ -122,26 +218,60 @@
                     "overall": 100
                 },
                 "personalityTraits": {
-                    "motivated": 1.7,
-                    "irresponsible": 0.9
+                    "forgetful": 0.8,
+                    "motivated": 1.7
                 },
                 "subjectSkills": {
-                    "math": 78,
-                    "english": 87,
-                    "science": 63,
-                    "history": 34,
-                    "electives": 53
+                    "math": 81,
+                    "english": 41,
+                    "science": 91,
+                    "history": 94,
+                    "electives": 91
                 }
             },
             {
-                "firstName": "Patricia",
-                "lastName": "Oconnor",
-                "gender": "female",
-                "studentId": "10520056",
+                "firstName": "Kelvin",
+                "lastName": "Miltenberger",
+                "gender": "male",
+                "studentId": "10820056",
                 "points": 0,
                 "birthday": [
                     "2005",
                     "6",
+                    "8"
+                ],
+                "assignments": [],
+                "grades": {
+                    "math": 100,
+                    "english": 100,
+                    "science": 100,
+                    "history": 100,
+                    "electives": 100,
+                    "overall": 100
+                },
+                "personalityTraits": {
+                    "dull": 1,
+                    "motivated": 1.7
+                },
+                "subjectSkills": {
+                    "math": 45,
+                    "english": 91,
+                    "science": 99,
+                    "history": 54,
+                    "electives": 73
+                }
+            }
+        ],
+        "senior": [
+            {
+                "firstName": "Theresa",
+                "lastName": "Mcbride",
+                "gender": "female",
+                "studentId": "105200410",
+                "points": 0,
+                "birthday": [
+                    "2004",
+                    "10",
                     "5"
                 ],
                 "assignments": [],
@@ -155,124 +285,26 @@
                 },
                 "personalityTraits": {
                     "honest": 1.2,
-                    "unfocused": 0.8
+                    "lazy": 0.8
                 },
                 "subjectSkills": {
-                    "math": 82,
-                    "english": 47,
-                    "science": 82,
-                    "history": 91,
-                    "electives": 97
+                    "math": 33,
+                    "english": 62,
+                    "science": 61,
+                    "history": 51,
+                    "electives": 91
                 }
             },
             {
-                "firstName": "Shirley",
-                "lastName": "Rutledge",
+                "firstName": "Danielle",
+                "lastName": "Swanson",
                 "gender": "female",
-                "studentId": "102020053",
-                "points": 0,
-                "birthday": [
-                    "2005",
-                    "3",
-                    "20"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "hard-working": 1.9,
-                    "late": 0.9
-                },
-                "subjectSkills": {
-                    "math": 62,
-                    "english": 52,
-                    "science": 82,
-                    "history": 95,
-                    "electives": 81
-                }
-            }
-        ],
-        "senior": [
-            {
-                "firstName": "Linwood",
-                "lastName": "Jones",
-                "gender": "male",
-                "studentId": "10520046",
+                "studentId": "108200410",
                 "points": 0,
                 "birthday": [
                     "2004",
-                    "6",
-                    "5"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "athletic": 1.1,
-                    "unfocused": 0.8
-                },
-                "subjectSkills": {
-                    "math": 47,
-                    "english": 61,
-                    "science": 59,
-                    "history": 81,
-                    "electives": 51
-                }
-            },
-            {
-                "firstName": "Ruth",
-                "lastName": "Mchugh",
-                "gender": "female",
-                "studentId": "10820074",
-                "points": 0,
-                "birthday": [
-                    "2007",
-                    "4",
+                    "10",
                     "8"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "friendly": 1.1,
-                    "bad-ego": 1
-                },
-                "subjectSkills": {
-                    "math": 41,
-                    "english": 99,
-                    "science": 84,
-                    "history": 22,
-                    "electives": 97
-                }
-            },
-            {
-                "firstName": "Pamela",
-                "lastName": "Putnam",
-                "gender": "female",
-                "studentId": "1024200611",
-                "points": 0,
-                "birthday": [
-                    "2006",
-                    "11",
-                    "24"
                 ],
                 "assignments": [],
                 "grades": {
@@ -285,302 +317,14 @@
                 },
                 "personalityTraits": {
                     "forgetful": 0.8,
-                    "social": 1.2
+                    "athletic": 1.1
                 },
                 "subjectSkills": {
-                    "math": 92,
-                    "english": 75,
-                    "science": 89,
-                    "history": 59,
-                    "electives": 72
-                }
-            },
-            {
-                "firstName": "James",
-                "lastName": "Smith",
-                "gender": "male",
-                "studentId": "1015200710",
-                "points": 0,
-                "birthday": [
-                    "2007",
-                    "10",
-                    "15"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "funny": 1.1,
-                    "irresponsible": 0.9
-                },
-                "subjectSkills": {
-                    "math": 33,
-                    "english": 97,
-                    "science": 53,
-                    "history": 70,
-                    "electives": 71
-                }
-            },
-            {
-                "firstName": "Helen",
-                "lastName": "Holladay",
-                "gender": "female",
-                "studentId": "10420041",
-                "points": 0,
-                "birthday": [
-                    "2004",
-                    "1",
-                    "4"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "hard-working": 1.9,
-                    "bad-ego": 1
-                },
-                "subjectSkills": {
-                    "math": 29,
-                    "english": 30,
-                    "science": 86,
-                    "history": 97,
-                    "electives": 74
-                }
-            },
-            {
-                "firstName": "Dolly",
-                "lastName": "Bell",
-                "gender": "female",
-                "studentId": "101620049",
-                "points": 0,
-                "birthday": [
-                    "2004",
-                    "9",
-                    "16"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "agressive": 1,
-                    "motivated": 1.7
-                },
-                "subjectSkills": {
-                    "math": 97,
-                    "english": 98,
-                    "science": 90,
-                    "history": 34,
-                    "electives": 94
-                }
-            },
-            {
-                "firstName": "Victor",
-                "lastName": "Sanchez",
-                "gender": "male",
-                "studentId": "10720066",
-                "points": 0,
-                "birthday": [
-                    "2006",
-                    "6",
-                    "7"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "childish": 0.9,
-                    "honest": 1.2
-                },
-                "subjectSkills": {
-                    "math": 67,
-                    "english": 72,
+                    "math": 79,
+                    "english": 69,
                     "science": 97,
-                    "history": 50,
-                    "electives": 50
-                }
-            },
-            {
-                "firstName": "Lisa",
-                "lastName": "Williams",
-                "gender": "female",
-                "studentId": "103020063",
-                "points": 0,
-                "birthday": [
-                    "2006",
-                    "3",
-                    "30"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "late": 0.9,
-                    "hard-working": 1.9
-                },
-                "subjectSkills": {
-                    "math": 70,
-                    "english": 93,
-                    "science": 67,
-                    "history": 62,
-                    "electives": 51
-                }
-            },
-            {
-                "firstName": "Mary",
-                "lastName": "Zielonka",
-                "gender": "female",
-                "studentId": "10820076",
-                "points": 0,
-                "birthday": [
-                    "2007",
-                    "6",
-                    "8"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "hard-working": 1.9,
-                    "bad-ego": 1
-                },
-                "subjectSkills": {
-                    "math": 65,
-                    "english": 97,
-                    "science": 72,
-                    "history": 76,
-                    "electives": 76
-                }
-            },
-            {
-                "firstName": "Virginia",
-                "lastName": "Crick",
-                "gender": "female",
-                "studentId": "10720065",
-                "points": 0,
-                "birthday": [
-                    "2006",
-                    "5",
-                    "7"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "lazy": 0.8,
-                    "friendly": 1.1
-                },
-                "subjectSkills": {
-                    "math": 56,
-                    "english": 58,
-                    "science": 77,
-                    "history": 40,
-                    "electives": 72
-                }
-            },
-            {
-                "firstName": "James",
-                "lastName": "Dobbs",
-                "gender": "male",
-                "studentId": "102420051",
-                "points": 0,
-                "birthday": [
-                    "2005",
-                    "1",
-                    "24"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "leadership": 1.5,
-                    "childish": 0.9
-                },
-                "subjectSkills": {
-                    "math": 32,
-                    "english": 84,
-                    "science": 96,
-                    "history": 20,
-                    "electives": 65
-                }
-            },
-            {
-                "firstName": "Michael",
-                "lastName": "Watkins",
-                "gender": "male",
-                "studentId": "102820072",
-                "points": 0,
-                "birthday": [
-                    "2007",
-                    "2",
-                    "28"
-                ],
-                "assignments": [],
-                "grades": {
-                    "math": 100,
-                    "english": 100,
-                    "science": 100,
-                    "history": 100,
-                    "electives": 100,
-                    "overall": 100
-                },
-                "personalityTraits": {
-                    "open-minded": 1.5,
-                    "late": 0.9
-                },
-                "subjectSkills": {
-                    "math": 96,
-                    "english": 76,
-                    "science": 85,
-                    "history": 82,
-                    "electives": 73
+                    "history": 35,
+                    "electives": 87
                 }
             }
         ]
@@ -588,402 +332,402 @@
     "staff": {
         "principal": [
             {
-                "firstName": "Joseph",
-                "lastName": "Burnett",
+                "firstName": "Brett",
+                "lastName": "Kuhn",
                 "gender": "male",
                 "birthday": [
-                    1994,
-                    12,
-                    21
+                    1978,
+                    6,
+                    18
                 ],
                 "personalityTraits": {
-                    "leadership": 1.5,
-                    "unfocused": 0.8
+                    "irresponsible": 0.9,
+                    "friendly": 1.1
                 },
-                "skill": 42
+                "skill": 7
             }
         ],
         "vicePrincipal": [
             {
-                "firstName": "Gloria",
-                "lastName": "Fry",
-                "gender": "female",
+                "firstName": "Christopher",
+                "lastName": "Long",
+                "gender": "male",
                 "birthday": [
-                    1987,
-                    3,
-                    21
+                    1992,
+                    4,
+                    24
                 ],
                 "personalityTraits": {
-                    "athletic": 1.1,
-                    "uninteresting": 1
+                    "dull": 1,
+                    "athletic": 1.1
                 },
-                "skill": 50
+                "skill": 74
             }
         ],
         "counselor": [
             {
-                "firstName": "Susan",
-                "lastName": "Ellsworth",
+                "firstName": "Ronald",
+                "lastName": "Zander",
+                "gender": "male",
+                "birthday": [
+                    1977,
+                    2,
+                    1
+                ],
+                "personalityTraits": {
+                    "unfocused": 0.8,
+                    "hard-working": 1.9
+                },
+                "skill": 66
+            },
+            {
+                "firstName": "Brenda",
+                "lastName": "Schrock",
                 "gender": "female",
                 "birthday": [
                     1994,
-                    3,
-                    4
-                ],
-                "personalityTraits": {
-                    "leadership": 1.5,
-                    "bad-ego": 1
-                },
-                "skill": 39
-            },
-            {
-                "firstName": "Thomas",
-                "lastName": "Johnson",
-                "gender": "male",
-                "birthday": [
-                    1996,
-                    9,
-                    15
-                ],
-                "personalityTraits": {
-                    "late": 0.9,
-                    "motivated": 1.7
-                },
-                "skill": 15
-            },
-            {
-                "firstName": "Erika",
-                "lastName": "Cuadras",
-                "gender": "female",
-                "birthday": [
-                    1984,
-                    2,
-                    17
-                ],
-                "personalityTraits": {
-                    "leadership": 1.5,
-                    "lazy": 0.8
-                },
-                "skill": 54
-            },
-            {
-                "firstName": "Kelly",
-                "lastName": "Santiago",
-                "gender": "female",
-                "birthday": [
-                    1989,
-                    5,
-                    13
-                ],
-                "personalityTraits": {
-                    "leadership": 1.5,
-                    "childish": 0.9
-                },
-                "skill": 56
-            }
-        ],
-        "officeWorker": [
-            {
-                "firstName": "Latricia",
-                "lastName": "Davis",
-                "gender": "female",
-                "birthday": [
-                    1988,
-                    7,
-                    28
-                ],
-                "personalityTraits": {
-                    "mature": 1.4,
-                    "unfocused": 0.8
-                },
-                "skill": 92
-            },
-            {
-                "firstName": "Ivan",
-                "lastName": "Freeman",
-                "gender": "male",
-                "birthday": [
-                    1983,
-                    1,
-                    21
-                ],
-                "personalityTraits": {
-                    "hard-working": 1.9,
-                    "forgetful": 0.8
-                },
-                "skill": 48
-            },
-            {
-                "firstName": "Karyn",
-                "lastName": "Redmond",
-                "gender": "female",
-                "birthday": [
-                    1987,
-                    9,
-                    18
+                    10,
+                    22
                 ],
                 "personalityTraits": {
                     "dull": 1,
                     "motivated": 1.7
                 },
-                "skill": 18
+                "skill": 81
             },
             {
-                "firstName": "Yvonne",
-                "lastName": "Black",
-                "gender": "female",
-                "birthday": [
-                    1986,
-                    12,
-                    8
-                ],
-                "personalityTraits": {
-                    "agressive": 1,
-                    "funny": 1.1
-                },
-                "skill": 6
-            },
-            {
-                "firstName": "George",
-                "lastName": "Green",
+                "firstName": "Bruce",
+                "lastName": "Kanzenbach",
                 "gender": "male",
                 "birthday": [
-                    1969,
-                    8,
-                    21
+                    1991,
+                    6,
+                    1
+                ],
+                "personalityTraits": {
+                    "bad-ego": 1,
+                    "social": 1.2
+                },
+                "skill": 24
+            },
+            {
+                "firstName": "Daniel",
+                "lastName": "King",
+                "gender": "male",
+                "birthday": [
+                    1973,
+                    5,
+                    14
+                ],
+                "personalityTraits": {
+                    "open-minded": 1.5,
+                    "bad-ego": 1
+                },
+                "skill": 30
+            }
+        ],
+        "officeWorker": [
+            {
+                "firstName": "Juan",
+                "lastName": "Jack",
+                "gender": "male",
+                "birthday": [
+                    1973,
+                    3,
+                    13
                 ],
                 "personalityTraits": {
                     "uninteresting": 1,
-                    "motivated": 1.7
+                    "social": 1.2
                 },
-                "skill": 11
+                "skill": 23
             },
             {
-                "firstName": "Sara",
-                "lastName": "Kocon",
+                "firstName": "Humberto",
+                "lastName": "Reyes",
+                "gender": "male",
+                "birthday": [
+                    1974,
+                    4,
+                    10
+                ],
+                "personalityTraits": {
+                    "dull": 1,
+                    "mature": 1.4
+                },
+                "skill": 99
+            },
+            {
+                "firstName": "Diana",
+                "lastName": "Alexander",
                 "gender": "female",
                 "birthday": [
-                    1971,
-                    7,
+                    1991,
+                    2,
                     24
                 ],
                 "personalityTraits": {
-                    "leadership": 1.5,
-                    "lazy": 0.8
+                    "dull": 1,
+                    "honest": 1.2
                 },
-                "skill": 57
+                "skill": 21
+            },
+            {
+                "firstName": "Terry",
+                "lastName": "Burton",
+                "gender": "female",
+                "birthday": [
+                    1996,
+                    12,
+                    14
+                ],
+                "personalityTraits": {
+                    "forgetful": 0.8,
+                    "athletic": 1.1
+                },
+                "skill": 4
+            },
+            {
+                "firstName": "Jesse",
+                "lastName": "Carter",
+                "gender": "male",
+                "birthday": [
+                    1996,
+                    4,
+                    21
+                ],
+                "personalityTraits": {
+                    "bad-ego": 1,
+                    "athletic": 1.1
+                },
+                "skill": 62
+            },
+            {
+                "firstName": "Rose",
+                "lastName": "Myers",
+                "gender": "female",
+                "birthday": [
+                    1995,
+                    1,
+                    6
+                ],
+                "personalityTraits": {
+                    "forgetful": 0.8,
+                    "hard-working": 1.9
+                },
+                "skill": 11
             }
         ],
         "security": [
             {
-                "firstName": "Mary",
-                "lastName": "Crowder",
+                "firstName": "Yvonne",
+                "lastName": "Straley",
                 "gender": "female",
                 "birthday": [
-                    1984,
-                    12,
-                    4
-                ],
-                "personalityTraits": {
-                    "athletic": 1.1,
-                    "dull": 1
-                },
-                "skill": 79
-            },
-            {
-                "firstName": "Joselyn",
-                "lastName": "Carroll",
-                "gender": "female",
-                "birthday": [
-                    1979,
-                    8,
-                    15
-                ],
-                "personalityTraits": {
-                    "mature": 1.4,
-                    "childish": 0.9
-                },
-                "skill": 100
-            },
-            {
-                "firstName": "Jose",
-                "lastName": "Smith",
-                "gender": "male",
-                "birthday": [
-                    1979,
-                    11,
-                    29
-                ],
-                "personalityTraits": {
-                    "forgetful": 0.8,
-                    "mature": 1.4
-                },
-                "skill": 92
-            },
-            {
-                "firstName": "Priscilla",
-                "lastName": "Flores",
-                "gender": "female",
-                "birthday": [
-                    1975,
-                    2,
-                    9
-                ],
-                "personalityTraits": {
-                    "forgetful": 0.8,
-                    "social": 1.2
-                },
-                "skill": 100
-            }
-        ],
-        "maintenance": [
-            {
-                "firstName": "Maureen",
-                "lastName": "Torrez",
-                "gender": "female",
-                "birthday": [
-                    1974,
-                    7,
+                    1970,
+                    3,
                     18
-                ],
-                "personalityTraits": {
-                    "mature": 1.4,
-                    "uninteresting": 1
-                },
-                "skill": 61
-            },
-            {
-                "firstName": "Sarah",
-                "lastName": "Burnette",
-                "gender": "female",
-                "birthday": [
-                    1975,
-                    4,
-                    3
                 ],
                 "personalityTraits": {
                     "honest": 1.2,
                     "unfocused": 0.8
                 },
-                "skill": 11
+                "skill": 52
             },
             {
-                "firstName": "Deborah",
-                "lastName": "Poland",
-                "gender": "female",
+                "firstName": "John",
+                "lastName": "Barnard",
+                "gender": "male",
                 "birthday": [
-                    1982,
+                    1999,
                     12,
-                    14
+                    5
                 ],
                 "personalityTraits": {
-                    "hard-working": 1.9,
-                    "late": 0.9
+                    "dull": 1,
+                    "open-minded": 1.5
                 },
-                "skill": 19
+                "skill": 66
             },
             {
-                "firstName": "Rosa",
-                "lastName": "Zhang",
+                "firstName": "Lakiesha",
+                "lastName": "Tirado",
                 "gender": "female",
                 "birthday": [
                     1979,
-                    12,
-                    15
-                ],
-                "personalityTraits": {
-                    "mature": 1.4,
-                    "dull": 1
-                },
-                "skill": 43
-            },
-            {
-                "firstName": "Norris",
-                "lastName": "Carter",
-                "gender": "male",
-                "birthday": [
-                    1971,
-                    8,
-                    20
-                ],
-                "personalityTraits": {
-                    "open-minded": 1.5,
-                    "agressive": 1
-                },
-                "skill": 12
-            },
-            {
-                "firstName": "Karen",
-                "lastName": "Neal",
-                "gender": "female",
-                "birthday": [
-                    1990,
-                    8,
+                    7,
                     24
                 ],
                 "personalityTraits": {
-                    "friendly": 1.1,
-                    "unfocused": 0.8
+                    "childish": 0.9,
+                    "social": 1.2
                 },
-                "skill": 41
+                "skill": 37
             },
             {
-                "firstName": "Linda",
-                "lastName": "Miller",
+                "firstName": "Lore",
+                "lastName": "Parker",
                 "gender": "female",
                 "birthday": [
-                    1970,
-                    2,
-                    15
-                ],
-                "personalityTraits": {
-                    "leadership": 1.5,
-                    "childish": 0.9
-                },
-                "skill": 95
-            },
-            {
-                "firstName": "Dale",
-                "lastName": "Morrison",
-                "gender": "male",
-                "birthday": [
-                    1992,
-                    2,
-                    23
+                    1969,
+                    8,
+                    4
                 ],
                 "personalityTraits": {
                     "hard-working": 1.9,
-                    "late": 0.9
+                    "lazy": 0.8
                 },
-                "skill": 49
-            },
+                "skill": 21
+            }
+        ],
+        "maintenance": [
             {
-                "firstName": "Norah",
-                "lastName": "Williams",
-                "gender": "female",
+                "firstName": "George",
+                "lastName": "Davidson",
+                "gender": "male",
                 "birthday": [
-                    1993,
-                    3,
-                    15
+                    1998,
+                    6,
+                    4
                 ],
                 "personalityTraits": {
-                    "friendly": 1.1,
-                    "uninteresting": 1
+                    "honest": 1.2,
+                    "agressive": 1
                 },
-                "skill": 12
+                "skill": 40
             },
             {
-                "firstName": "Ralph",
-                "lastName": "Branson",
+                "firstName": "Scott",
+                "lastName": "Clarke",
+                "gender": "male",
+                "birthday": [
+                    1983,
+                    2,
+                    28
+                ],
+                "personalityTraits": {
+                    "late": 0.9,
+                    "hard-working": 1.9
+                },
+                "skill": 16
+            },
+            {
+                "firstName": "James",
+                "lastName": "Wagner",
                 "gender": "male",
                 "birthday": [
                     1984,
+                    12,
+                    1
+                ],
+                "personalityTraits": {
+                    "dull": 1,
+                    "hard-working": 1.9
+                },
+                "skill": 79
+            },
+            {
+                "firstName": "Edward",
+                "lastName": "Murdock",
+                "gender": "male",
+                "birthday": [
+                    1975,
                     2,
+                    28
+                ],
+                "personalityTraits": {
+                    "leadership": 1.5,
+                    "agressive": 1
+                },
+                "skill": 17
+            },
+            {
+                "firstName": "Jack",
+                "lastName": "Hobart",
+                "gender": "male",
+                "birthday": [
+                    1970,
+                    3,
+                    28
+                ],
+                "personalityTraits": {
+                    "motivated": 1.7,
+                    "lazy": 0.8
+                },
+                "skill": 68
+            },
+            {
+                "firstName": "John",
+                "lastName": "Howell",
+                "gender": "male",
+                "birthday": [
+                    1979,
+                    12,
+                    19
+                ],
+                "personalityTraits": {
+                    "leadership": 1.5,
+                    "lazy": 0.8
+                },
+                "skill": 28
+            },
+            {
+                "firstName": "Lesley",
+                "lastName": "Roberts",
+                "gender": "female",
+                "birthday": [
+                    1972,
+                    6,
+                    21
+                ],
+                "personalityTraits": {
+                    "bad-ego": 1,
+                    "mature": 1.4
+                },
+                "skill": 47
+            },
+            {
+                "firstName": "Sherri",
+                "lastName": "Fulkerson",
+                "gender": "female",
+                "birthday": [
+                    1988,
+                    3,
+                    26
+                ],
+                "personalityTraits": {
+                    "hard-working": 1.9,
+                    "agressive": 1
+                },
+                "skill": 24
+            },
+            {
+                "firstName": "Evelyn",
+                "lastName": "Conyer",
+                "gender": "female",
+                "birthday": [
+                    1971,
+                    11,
+                    24
+                ],
+                "personalityTraits": {
+                    "irresponsible": 0.9,
+                    "mature": 1.4
+                },
+                "skill": 40
+            },
+            {
+                "firstName": "Danny",
+                "lastName": "Layton",
+                "gender": "male",
+                "birthday": [
+                    1972,
+                    8,
                     23
                 ],
                 "personalityTraits": {
-                    "athletic": 1.1,
-                    "bad-ego": 1
+                    "uninteresting": 1,
+                    "open-minded": 1.5
                 },
                 "skill": 74
             }
@@ -991,310 +735,310 @@
         "teacher": {
             "math": [
                 {
-                    "firstName": "Reginald",
-                    "lastName": "Cooper",
+                    "firstName": "Ray",
+                    "lastName": "Chait",
                     "gender": "male",
                     "birthday": [
-                        1971,
-                        8,
-                        6
+                        1987,
+                        9,
+                        22
                     ],
                     "personalityTraits": {
-                        "leadership": 1.5,
-                        "childish": 0.9
+                        "uninteresting": 1,
+                        "athletic": 1.1
                     },
-                    "skill": 27
+                    "skill": 21
                 },
                 {
-                    "firstName": "Robert",
-                    "lastName": "Hallman",
-                    "gender": "male",
+                    "firstName": "Ann",
+                    "lastName": "Alvarado",
+                    "gender": "female",
+                    "birthday": [
+                        1982,
+                        4,
+                        12
+                    ],
+                    "personalityTraits": {
+                        "irresponsible": 0.9,
+                        "athletic": 1.1
+                    },
+                    "skill": 66
+                },
+                {
+                    "firstName": "Elizabeth",
+                    "lastName": "Morgia",
+                    "gender": "female",
+                    "birthday": [
+                        1990,
+                        10,
+                        11
+                    ],
+                    "personalityTraits": {
+                        "dull": 1,
+                        "leadership": 1.5
+                    },
+                    "skill": 42
+                },
+                {
+                    "firstName": "Janet",
+                    "lastName": "Scott",
+                    "gender": "female",
                     "birthday": [
                         1993,
+                        6,
+                        23
+                    ],
+                    "personalityTraits": {
+                        "friendly": 1.1,
+                        "lazy": 0.8
+                    },
+                    "skill": 32
+                },
+                {
+                    "firstName": "Dale",
+                    "lastName": "Clark",
+                    "gender": "female",
+                    "birthday": [
+                        1990,
                         8,
                         12
                     ],
                     "personalityTraits": {
                         "lazy": 0.8,
-                        "funny": 1.1
+                        "mature": 1.4
                     },
-                    "skill": 8
-                },
-                {
-                    "firstName": "Kenneth",
-                    "lastName": "Winter",
-                    "gender": "male",
-                    "birthday": [
-                        1995,
-                        12,
-                        13
-                    ],
-                    "personalityTraits": {
-                        "open-minded": 1.5,
-                        "irresponsible": 0.9
-                    },
-                    "skill": 17
-                },
-                {
-                    "firstName": "Moses",
-                    "lastName": "Huntley",
-                    "gender": "male",
-                    "birthday": [
-                        1988,
-                        5,
-                        11
-                    ],
-                    "personalityTraits": {
-                        "open-minded": 1.5,
-                        "bad-ego": 1
-                    },
-                    "skill": 54
-                },
-                {
-                    "firstName": "David",
-                    "lastName": "Sherman",
-                    "gender": "male",
-                    "birthday": [
-                        1979,
-                        4,
-                        15
-                    ],
-                    "personalityTraits": {
-                        "mature": 1.4,
-                        "dull": 1
-                    },
-                    "skill": 47
+                    "skill": 95
                 }
             ],
             "science": [
                 {
-                    "firstName": "Edna",
-                    "lastName": "Pete",
-                    "gender": "female",
+                    "firstName": "Adam",
+                    "lastName": "Manternach",
+                    "gender": "male",
                     "birthday": [
-                        1969,
-                        1,
-                        2
+                        1991,
+                        5,
+                        19
                     ],
                     "personalityTraits": {
-                        "honest": 1.2,
-                        "lazy": 0.8
+                        "dull": 1,
+                        "mature": 1.4
                     },
-                    "skill": 80
+                    "skill": 55
                 },
                 {
-                    "firstName": "Tonya",
-                    "lastName": "Butz",
+                    "firstName": "Ruth",
+                    "lastName": "Robinson",
                     "gender": "female",
                     "birthday": [
-                        1979,
-                        8,
-                        7
+                        1988,
+                        9,
+                        23
                     ],
                     "personalityTraits": {
-                        "hard-working": 1.9,
-                        "agressive": 1
+                        "uninteresting": 1,
+                        "social": 1.2
                     },
-                    "skill": 3
+                    "skill": 5
                 },
                 {
-                    "firstName": "Tonya",
-                    "lastName": "Nelson",
+                    "firstName": "Carol",
+                    "lastName": "Belton",
                     "gender": "female",
                     "birthday": [
-                        1989,
+                        1994,
                         1,
-                        28
+                        4
+                    ],
+                    "personalityTraits": {
+                        "uninteresting": 1,
+                        "mature": 1.4
+                    },
+                    "skill": 61
+                },
+                {
+                    "firstName": "Rosie",
+                    "lastName": "Rinderer",
+                    "gender": "female",
+                    "birthday": [
+                        1986,
+                        7,
+                        15
                     ],
                     "personalityTraits": {
                         "irresponsible": 0.9,
-                        "social": 1.2
+                        "friendly": 1.1
                     },
-                    "skill": 20
+                    "skill": 70
                 },
                 {
-                    "firstName": "John",
-                    "lastName": "Davenport",
-                    "gender": "male",
-                    "birthday": [
-                        1978,
-                        10,
-                        9
-                    ],
-                    "personalityTraits": {
-                        "late": 0.9,
-                        "motivated": 1.7
-                    },
-                    "skill": 49
-                },
-                {
-                    "firstName": "Ana",
-                    "lastName": "Hudgins",
+                    "firstName": "Cheyenne",
+                    "lastName": "Labonte",
                     "gender": "female",
                     "birthday": [
-                        1997,
-                        11,
-                        17
+                        1973,
+                        7,
+                        6
                     ],
                     "personalityTraits": {
-                        "hard-working": 1.9,
-                        "dull": 1
+                        "leadership": 1.5,
+                        "lazy": 0.8
                     },
-                    "skill": 63
+                    "skill": 41
                 }
             ],
             "english": [
                 {
-                    "firstName": "Ronald",
-                    "lastName": "Watts",
-                    "gender": "male",
-                    "birthday": [
-                        1994,
-                        4,
-                        14
-                    ],
-                    "personalityTraits": {
-                        "athletic": 1.1,
-                        "forgetful": 0.8
-                    },
-                    "skill": 21
-                },
-                {
-                    "firstName": "Albert",
-                    "lastName": "Mochizuki",
-                    "gender": "male",
-                    "birthday": [
-                        1988,
-                        2,
-                        23
-                    ],
-                    "personalityTraits": {
-                        "friendly": 1.1,
-                        "dull": 1
-                    },
-                    "skill": 56
-                },
-                {
-                    "firstName": "Thomas",
-                    "lastName": "Houghton",
-                    "gender": "male",
-                    "birthday": [
-                        1969,
-                        2,
-                        19
-                    ],
-                    "personalityTraits": {
-                        "forgetful": 0.8,
-                        "honest": 1.2
-                    },
-                    "skill": 72
-                },
-                {
-                    "firstName": "Robert",
-                    "lastName": "Cuchares",
+                    "firstName": "Roy",
+                    "lastName": "Dean",
                     "gender": "male",
                     "birthday": [
                         1986,
-                        1,
-                        30
+                        9,
+                        1
                     ],
                     "personalityTraits": {
-                        "funny": 1.1,
-                        "bad-ego": 1
+                        "bad-ego": 1,
+                        "funny": 1.1
                     },
-                    "skill": 69
+                    "skill": 39
                 },
                 {
-                    "firstName": "Sammy",
-                    "lastName": "Knowles",
-                    "gender": "male",
+                    "firstName": "Anita",
+                    "lastName": "Williams",
+                    "gender": "female",
                     "birthday": [
-                        1972,
-                        5,
-                        22
+                        1973,
+                        11,
+                        24
                     ],
                     "personalityTraits": {
-                        "leadership": 1.5,
-                        "late": 0.9
+                        "uninteresting": 1,
+                        "mature": 1.4
                     },
-                    "skill": 18
+                    "skill": 57
+                },
+                {
+                    "firstName": "Robert",
+                    "lastName": "Dorris",
+                    "gender": "male",
+                    "birthday": [
+                        1976,
+                        5,
+                        11
+                    ],
+                    "personalityTraits": {
+                        "uninteresting": 1,
+                        "athletic": 1.1
+                    },
+                    "skill": 94
+                },
+                {
+                    "firstName": "Elizabeth",
+                    "lastName": "Skrine",
+                    "gender": "female",
+                    "birthday": [
+                        1987,
+                        12,
+                        19
+                    ],
+                    "personalityTraits": {
+                        "late": 0.9,
+                        "leadership": 1.5
+                    },
+                    "skill": 13
+                },
+                {
+                    "firstName": "Caroline",
+                    "lastName": "Mcguire",
+                    "gender": "female",
+                    "birthday": [
+                        1973,
+                        7,
+                        18
+                    ],
+                    "personalityTraits": {
+                        "irresponsible": 0.9,
+                        "open-minded": 1.5
+                    },
+                    "skill": 19
                 }
             ],
             "history": [
                 {
-                    "firstName": "Frank",
-                    "lastName": "Younker",
+                    "firstName": "Aaron",
+                    "lastName": "Mcabee",
                     "gender": "male",
                     "birthday": [
-                        1972,
-                        1,
-                        22
-                    ],
-                    "personalityTraits": {
-                        "forgetful": 0.8,
-                        "social": 1.2
-                    },
-                    "skill": 80
-                },
-                {
-                    "firstName": "Christine",
-                    "lastName": "Moreno",
-                    "gender": "female",
-                    "birthday": [
                         1980,
-                        11,
-                        17
+                        6,
+                        18
                     ],
                     "personalityTraits": {
-                        "athletic": 1.1,
-                        "late": 0.9
+                        "dull": 1,
+                        "social": 1.2
                     },
                     "skill": 51
                 },
                 {
-                    "firstName": "Alan",
-                    "lastName": "Fruman",
+                    "firstName": "James",
+                    "lastName": "Viner",
                     "gender": "male",
                     "birthday": [
-                        1989,
+                        1973,
                         4,
-                        30
+                        18
                     ],
                     "personalityTraits": {
-                        "forgetful": 0.8,
-                        "motivated": 1.7
+                        "uninteresting": 1,
+                        "leadership": 1.5
                     },
-                    "skill": 30
+                    "skill": 90
                 },
                 {
-                    "firstName": "Mary",
-                    "lastName": "Pickrell",
+                    "firstName": "Maria",
+                    "lastName": "Veneziano",
                     "gender": "female",
                     "birthday": [
-                        1983,
-                        3,
-                        17
+                        1984,
+                        11,
+                        18
                     ],
                     "personalityTraits": {
-                        "honest": 1.2,
-                        "uninteresting": 1
+                        "open-minded": 1.5,
+                        "unfocused": 0.8
                     },
-                    "skill": 28
+                    "skill": 68
                 },
                 {
-                    "firstName": "Alison",
-                    "lastName": "Davidson",
+                    "firstName": "Hannah",
+                    "lastName": "Morton",
                     "gender": "female",
                     "birthday": [
-                        1979,
-                        10,
-                        8
+                        1985,
+                        9,
+                        29
                     ],
                     "personalityTraits": {
-                        "forgetful": 0.8,
+                        "friendly": 1.1,
+                        "lazy": 0.8
+                    },
+                    "skill": 22
+                },
+                {
+                    "firstName": "Shirley",
+                    "lastName": "Chaney",
+                    "gender": "female",
+                    "birthday": [
+                        1992,
+                        1,
+                        2
+                    ],
+                    "personalityTraits": {
+                        "irresponsible": 0.9,
                         "mature": 1.4
                     },
-                    "skill": 19
+                    "skill": 54
                 }
             ],
             "electives": []
@@ -1302,10 +1046,10 @@
     },
     "studentsNumber": {
         "total": 0,
-        "freshman": 2,
-        "sophmore": 1,
-        "junior": 4,
-        "senior": 12,
+        "freshman": 4,
+        "sophmore": 2,
+        "junior": 3,
+        "senior": 2,
         "teachers": 0
     },
     "clubs": {
@@ -1317,8 +1061,8 @@
         }
     },
     "assignmentNumber": {
-        "total": 0,
-        "freshman": 0,
+        "total": 7,
+        "freshman": 7,
         "sophmore": 0,
         "junior": 0,
         "senior": 0

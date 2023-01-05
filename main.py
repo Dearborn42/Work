@@ -1,7 +1,8 @@
 import json
 import random
-import names
+
 import eel
+import names
 
 # Make sure to "pip install eel" and run this file.
 
@@ -30,12 +31,14 @@ schoolStaff = {
     "history": 5
 }
 
+
 def resetJson():
     """Function that wipes json data by replacing it with the contents of template.txt"""
     with open("template.txt", "r") as file:
         template = file.read()
         with open("people.json", "w") as file:
             file.write(template)
+
 
 @eel.expose
 def createWorkers():
@@ -64,7 +67,8 @@ def createWorkers():
             self.lastName = names.get_last_name()
             self.birthday = [birthYear, birthMonth, birthDay]
             self.personalityTraits = {}
-            self.personalityTraits.update({random.choice(list(posTraits.items())), random.choice(list(negTraits.items()))})
+            self.personalityTraits.update(
+                {random.choice(list(posTraits.items())), random.choice(list(negTraits.items()))})
             self.skill = random.randint(0, 100)
 
             # Open and update people.json
@@ -81,10 +85,12 @@ def createWorkers():
     # Generate staff
     resetJson()
     staff = Staff()
-    allStaff = ["principal", "vicePrincipal", "counselor", "officeWorker", "security", "maintenance", "math", "science", "english", "history"]
+    allStaff = ["principal", "vicePrincipal", "counselor", "officeWorker",
+                "security", "maintenance", "math", "science", "english", "history"]
     for i in allStaff:
         for j in range(schoolStaff[i]):
             staff.createStaff(job=i)
+
 
 @eel.expose
 def createStudents(numStudents):
@@ -156,6 +162,7 @@ def createStudents(numStudents):
         student = Student()
         student.createStudent()
 
+
 @eel.expose
 def createEvent(grade):
     """
@@ -184,6 +191,7 @@ def createEvent(grade):
         file.truncate()
         json.dump(fileData, file, indent=4)
 
+
 @eel.expose
 def assignmentCreation(assignmentName, subject, grade):
     """
@@ -210,7 +218,8 @@ def assignmentCreation(assignmentName, subject, grade):
         totalScore = 100
 
         for i in range(fileData["studentsNumber"][grade]):
-            score = random.randint(int(students[i]["subjectSkills"][subject]), 101) 
+            score = random.randint(
+                int(students[i]["subjectSkills"][subject]), 101)
             for j in students[i]["personalityTraits"].values():
                 score * i
             totalScore = (totalScore + score) / 2
@@ -218,5 +227,6 @@ def assignmentCreation(assignmentName, subject, grade):
         file.seek(0)
         file.truncate()
         json.dump(fileData, file, indent=4)
+
 
 eel.start('index.html')

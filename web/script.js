@@ -8,8 +8,9 @@ function reset() {
     log("Reset")
 }
 
-function createEvent(eventName, grade) {
-    console.log("test")
+function createEvent(grade) {
+    let event = document.getElementById('eGrade').value;
+    log(event + " event was created")
     eel.createEvent(grade)
 }
 
@@ -20,7 +21,7 @@ function assignmentCreation(assignmentName, grade) {
         if (radioButtons[i].checked) {
             selectedValue = radioButtons[i].value;
             eel.assignmentCreation(assignmentName, selectedValue, grade)
-            log("The assignment named, " + assignmentName + "was posted and graded!")
+            log("The assignment named, " + assignmentName + " was posted and graded!")
             break;
         }
     }

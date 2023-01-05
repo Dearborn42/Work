@@ -1,16 +1,16 @@
-const { app, BrowserWindow } = require('electron')
-
-function createWindow() {
-    window = new BrowserWindow({ width: 800, height: 600 })
-    window.loadFile('index.html')
+function addStudents(num) {
+    eel.createStudents(num)
 }
 
-app.on('ready', createWindow)
+function reset() {
+    console.log("t")
+    eel.createWorkers()
+}
 
-app.on('window-all-closed', () => {
-    // On macOS it is common for applications and their menu bar
-    // to stay active until the user quits explicitly with Cmd + Q
-    if (process.platform !== 'darwin') {
-        app.quit()
-    }
-})
+function createEvent(eventName, grade) {
+    eel.createEvent(eventName, grade)
+}
+
+function assignmentCreation(assignmentName, subject, grade) {
+    eel.assignmentCreation(assignmentName, subject, grade)
+}

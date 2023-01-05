@@ -9,24 +9,19 @@
     <meta property="og:title" content="Control">
     <meta charset="ISO-8859-1">
     <link rel="icon" href="./west-mec favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="web/style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="eel.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control Panel</title>
 </head>
 
 <body>
-    <script>
-        function clears(id) {
-            let content = document.getElementById(id).value;
-            document.getElementById(id).value = "";
-        }
-    </script>
     <div class="flexbox">
         <div class="row">
             <div id="logoCont">
-                <img src="/web/images/west-mec copy.png" alt="logo" id="logo">
+                <img src="../west-mec.png" alt="logo" id="logo">
             </div>
             <div id="title">
                 <h1>Control Panel</h1>
@@ -39,7 +34,7 @@
                     <label for="num">Enter number of students:</label>
                     <input type="text" id="num" name="student" value="">
                     <br>
-                    <button onclick="clears('num');">Submit</button>
+                    <button onclick="eel.createStudents(parseInt(document.getElementById('num').value))"">Submit</button>
                 </div>
                 <div class="creating">
                     <p id="assignments">Creating Assignments</p>
@@ -70,7 +65,7 @@
                     <br>
                     <input type="text" class="grade" id="grades" name="type" value="">
                     <br>
-                    <button onclick="clears('name'); clears('grades');">Submit</button>
+                    <button onclick="eel.assignmentCreation(document.getElementById('name').value,document.getElementById('grades').value)">Submit</button>
                     <!-- <button type="submit">Submit</button> -->
                 </div>
                 <div class="creating">
@@ -89,7 +84,7 @@
                     <label for="name">Event Name:</label>
                     <input type="text" id="eName" name="type" value="">
                     <br>
-                    <button onclick="clears('eName')">Submit</button>
+                    <button onclick="eel.createEvent(document.getElementById('eName').value)">Submit</button>
                 </div>
             </div>
             <div class="logs">
@@ -99,8 +94,12 @@
         </div>
         <div class="row">
             <div class="sim">
-                <h1 class="titleText">Simulate</h1>
-                <button id="simButton">Simulate</button>
+                <h1 class="titleText">Display Students</h1>
+                <button id="simButton">Submit</button>
+            </div>
+            <div class="reset">
+                <h1 class="titleText">End the Year</h1>
+                <button id="simButton ">Submit</button>
             </div>
             <div class="footer">
                 <div>
@@ -123,6 +122,7 @@
             </div>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>

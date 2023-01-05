@@ -76,6 +76,14 @@ div{
     text-align: center;
     border: 1px solid black;
 }
+
+.reset{
+    /* display: flex; */
+    flex-direction: row;
+    flex-grow: 2;
+    text-align: center;
+    border: 1px solid black;
+}
 #simButton{
     font-size: 150%;
 }

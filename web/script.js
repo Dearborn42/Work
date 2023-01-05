@@ -1,15 +1,11 @@
 function log(message) {
     logs = document.getElementById("log");
     logs.value += message + "\n";
-    console.log(message)
-}
-
-function addStudents(num) {
-    eel.createStudents(num)
 }
 
 function reset() {
     eel.createWorkers()
+    log("Reset")
 }
 
 function createEvent(eventName, grade) {
@@ -28,4 +24,9 @@ function assignmentCreation(assignmentName, grade) {
             break;
         }
     }
+}
+
+function addStudents(num) {
+    eel.createStudents(num)
+    log(`Added ${toString(num)}Students.`)
 }

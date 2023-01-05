@@ -3,6 +3,8 @@ import random
 import names
 import eel
 
+# Make sure to "pip install eel" and run this file.
+
 eel.init('web')
 
 # Open and load people.json file
@@ -216,7 +218,5 @@ def assignmentCreation(assignmentName, subject, grade):
         file.seek(0)
         file.truncate()
         json.dump(fileData, file, indent=4)
-
-createEvent("freshman")
 
 eel.start('index.html')

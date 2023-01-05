@@ -36,37 +36,38 @@
                     <br>
                     <button onclick="eel.createStudents(parseInt(document.getElementById('num').value))"">Submit</button>
                 </div>
-                <div class="creating">
-                    <p id="assignments">Creating Assignments</p>
-                    <label for="type">Type of assignment:</label>
-                    <ul>
-                        <li>
-                            <input type="radio" value="math" name="type">
-                            <label for="math">Math</label>
-                        </li>
-                        <li>
-                            <input type="radio" value="english" name="type">
-                            <label for="english">English</label>
-                        </li>
-                        <li>
-                            <input type="radio" value="science" name="type">
-                            <label for="science">Science</label>
-                        </li>
-                        <li>
-                            <input type="radio" value="history" name="type">
-                            <label for="history">History</label>
-                        </li>
-                    </ul>
-                    <label for="name" class="assignment">Assignment Name:</label>
-                    <br>
-                    <input type="text" class="grade" id="name" name="t" value="">
-                    <br>
-                    <label for="name" class="assignment">Grade level: "freshman, sophmore, etc."</label>
-                    <br>
-                    <input type="text" class="grade" id="grades" name="t" value="">
-                    <br>
-                    <button onclick="assignmentCreation(document.getElementById('name').value,document.getElementById('grades').value)">Submit</button>
-                    <!-- <button type="submit">Submit</button> -->
+                <div class=" creating">
+                        <p id="assignments">Creating Assignments</p>
+                        <label for="type">Type of assignment:</label>
+                        <ul>
+                            <li>
+                                <input type="radio" value="math" name="type">
+                                <label for="math">Math</label>
+                            </li>
+                            <li>
+                                <input type="radio" value="english" name="type">
+                                <label for="english">English</label>
+                            </li>
+                            <li>
+                                <input type="radio" value="science" name="type">
+                                <label for="science">Science</label>
+                            </li>
+                            <li>
+                                <input type="radio" value="history" name="type">
+                                <label for="history">History</label>
+                            </li>
+                        </ul>
+                        <label for="name" class="assignment">Assignment Name:</label>
+                        <br>
+                        <input type="text" class="grade" id="name" name="t" value="">
+                        <br>
+                        <label for="name" class="assignment">Grade level: "freshman, sophmore, etc."</label>
+                        <br>
+                        <input type="text" class="grade" id="grades" name="t" value="">
+                        <br>
+                        <button
+                            onclick="assignmentCreation(document.getElementById('name').value,document.getElementById('grades').value)">Submit</button>
+                        <!-- <button type="submit">Submit</button> -->
                 </div>
                 <div class="creating">
                     <p id="events">Creating Events</p>
@@ -86,7 +87,8 @@
                     <label for="name">Grade level: "freshman, sophmore, etc."</label><br>
                     <input type="text" id="eGrade" name="etype">
                     <br>
-                    <button onclick="createEvent(document.getElementById('eGrade').value,document.getElementById('eName').value)">Submit</button>
+                    <button
+                        onclick="createEvent(document.getElementById('eGrade').value,document.getElementById('eName').value)">Submit</button>
                 </div>
             </div>
             <div class="logs">
@@ -95,12 +97,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="sim">
-                <h1 class="titleText">Display Students</h1>
-                <button id="simButton" onclick="log('test')">Submit</button>
-            </div>
             <div class="reset">
-                <h1 class="titleText">End the Year</h1>
+                <h1 class="titleText">Reset</h1>
                 <button id="simButton" onclick="reset()">Submit</button>
             </div>
             <div class="footer">

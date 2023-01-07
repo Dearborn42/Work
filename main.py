@@ -1,5 +1,6 @@
 import json
 import random
+from operator import itemgetter
 
 import eel
 import names
@@ -190,6 +191,35 @@ def createEvent(grade):
         file.seek(0)
         file.truncate()
         json.dump(fileData, file, indent=4)
+
+
+@eel.expose
+def getWinners():
+    freshman = []
+    sophmore = []
+    junior = []
+    senior = []
+    with open('people.json', 'r+') as file:
+        fileData = json.load(file)
+        students = fileData["students"]
+
+        for i in range(fileData["studentsNumber"]["freshman"]):
+            freshman.append(students["freshman"][i]["grades"]["overall"])
+
+        for i in range(fileData["studentsNumber"]["sophmore"]):
+            sophmore.append(students["sophmore"][i]["grades"]["overall"])
+
+        for i in range(fileData["studentsNumber"]["junior"]):
+            junior.append(students["junior"][i]["grades"]["overall"])
+
+        for i in range(fileData["studentsNumber"]["senior"]):
+            senior.append(students["senior"][i]["grades"]["overall"])
+
+        top = max(freshman, sophmore, junior, senior)
+        topStudents = max(top)
+
+
+getWinners()
 
 
 @eel.expose
